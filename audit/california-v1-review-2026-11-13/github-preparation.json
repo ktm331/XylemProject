@@ -1,0 +1,46 @@
+{
+  "recorded_at_utc": "2026-11-13T06:01:16.083Z",
+  "repository": "palashraks-afk/XylemProject",
+  "verified_main": "2ce2832ffc2be043da6dc194c025d6abdbaf13a1",
+  "has_pages": false,
+  "visibility": "public",
+  "connected_permissions": {
+    "admin": false,
+    "maintain": false,
+    "push": true,
+    "triage": true,
+    "pull": true
+  },
+  "workflow": {
+    "id": 405457527,
+    "path": ".github/workflows/pages.yml",
+    "trigger": "workflow_dispatch only",
+    "upload_path": "app",
+    "permissions": {
+      "contents": "read",
+      "pages": "write",
+      "id-token": "write"
+    }
+  },
+  "latest_workflow_attempt": {
+    "id": 41766913118,
+    "conclusion": "failure",
+    "step": "actions/configure-pages@v5",
+    "deployment_step": "skipped",
+    "source_sha": "d9495817cb02aeca3de47d44ec10bbf8e558709f",
+    "reason": "Pages site not found; enablement:false"
+  },
+  "intended_default_site": "https://palashraks-afk.github.io/XylemProject/",
+  "intended_url_status": "inferred from GitHub default URL convention; not a verified phone link",
+  "publishing_approval": "PENDING",
+  "configuration_changes": "NONE",
+  "dispatch": "NOT PERFORMED",
+  "browser_inspection": "Stopped because current browser URL could not be confidently established; no settings modified",
+  "sources": [
+    "https://api.github.com/repos/palashraks-afk/XylemProject",
+    "https://api.github.com/repos/palashraks-afk/XylemProject/branches/main",
+    "https://github.com/palashraks-afk/XylemProject/actions/runs/41766913118",
+    "https://github.com/palashraks-afk/XylemProject/blob/2ce2832ffc2be043da6dc194c025d6abdbaf13a1/.github/workflows/pages.yml",
+    "https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site"
+  ]
+}

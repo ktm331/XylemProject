@@ -1,0 +1,28 @@
+{
+  "recorded_at_utc": "2026-11-14T04:55:44.079712+00:00",
+  "scope": "Actual authenticated hosted desktop CSV; independent frozen Python optimizer",
+  "physical_phone_spoken_AT_actual_phone_download": "UNVERIFIED",
+  "strict_served_html_bytes": "FAIL; user retained the exact-byte requirement",
+  "result": "PASS",
+  "original_download": "C:\\Users\\sai71\\Downloads\\xylem-placement-plan (3).csv",
+  "evidence_copy": "C:\\Users\\sai71\\.codex\\visualizations\\2026\\11\\13\\01a1d377-9c26-7a73-b228-eb550dde3ef9\\california-v1-release\\private-sites-hosted-500M.csv",
+  "sha256": "cb24ce54050680505b52a7a0f7b52471ed900082b38ca6d7b7b1c6e09c5643d9",
+  "systems": 97,
+  "people": 476663,
+  "cost_usd": 487919470,
+  "scenario": {
+    "b": 500.0,
+    "l": 1.0,
+    "h": 5.0,
+    "v": "fc",
+    "a": 0.5,
+    "r": 0.0,
+    "c": 0.0,
+    "m": 1.0
+  },
+  "ui_build": "efb5e6e0e986178bef4bb6c9d3810854623d0c8947d3ecb631c80accda6c7a1b",
+  "snapshot_id": "806032f64da14561b81c55e72179ec22f299774fa97b9b5f08c4742909f9c0bd",
+  "selected_ids_rows_costs_populations_weights_stability_metadata": "PASS",
+  "visible_plan_match": "PASS",
+  "direct_browser_security_globals": "UNVERIFIED; browser-control scope does not expose them"
+}

@@ -1,0 +1,185 @@
+{
+  "status": "FAIL",
+  "scope": "Exact authenticated HTTPS response bytes; not physical-phone or spoken-AT testing",
+  "url": "https://xylem-california-v1-efb5e6e0e986.srpatlola2020.chatgpt.site",
+  "project_id": "appgprj_6af7df45649c81918b43785b33a7c926",
+  "source_commit": "6f0cd6f96abcc6d8e10605641e4db24666b57912",
+  "original_commit": "2ce2832ffc2be043da6dc194c025d6abdbaf13a1",
+  "deployment_id": "appgdep_6af7e0d467dc81919a6c6274c31a2e94",
+  "version_id": "appgprj_6af7df45649c81918b43785b33a7c926~appgver_8b04f1f526a4819191696c2d8d1c5754",
+  "ui_build": "efb5e6e0e986178bef4bb6c9d3810854623d0c8947d3ecb631c80accda6c7a1b",
+  "snapshot_id": "806032f64da14561b81c55e72179ec22f299774fa97b9b5f08c4742909f9c0bd",
+  "supported_service_access_used": true,
+  "credential_recorded": false,
+  "files": [
+    {
+      "file": "app.js",
+      "status": "PASS",
+      "bytes": 64761,
+      "sha256": "581927a0541e4f408cf410ba709b2e607b7f62d64c15f822fea43f2b906e84c1",
+      "served_url": "https://xylem-california-v1-efb5e6e0e986.srpatlola2020.chatgpt.site/app.js?xylem_verify=1794630117162"
+    },
+    {
+      "file": "build.json",
+      "status": "PASS",
+      "bytes": 2442,
+      "sha256": "8e1d8b1ba0839f716887be21c4ff355a905f967d18f29b264afbf56f275fc22c",
+      "served_url": "https://xylem-california-v1-efb5e6e0e986.srpatlola2020.chatgpt.site/build.json?xylem_verify=1794630117162"
+    },
+    {
+      "file": "data/boundaries.geojson",
+      "status": "PASS",
+      "bytes": 266168,
+      "sha256": "682a80b9b1858fd416e8f8c9c50b6527dc70ab73521b1a681d175a7ec59ac212",
+      "served_url": "https://xylem-california-v1-efb5e6e0e986.srpatlola2020.chatgpt.site/data/boundaries.geojson?xylem_verify=1794630117162"
+    },
+    {
+      "file": "data/boundary_coverage.json",
+      "status": "PASS",
+      "bytes": 39,
+      "sha256": "574f6d09ad30eee09f628bbc69753120ccdf623d33914416a8daba90e27f55f3",
+      "served_url": "https://xylem-california-v1-efb5e6e0e986.srpatlola2020.chatgpt.site/data/boundary_coverage.json?xylem_verify=1794630117162"
+    },
+    {
+      "file": "data/counties.geojson",
+      "status": "PASS",
+      "bytes": 46897,
+      "sha256": "a04ee3483159d19f5d708517e3e2f1a016718d364a31e1b0460a0a4c8ed467e7",
+      "served_url": "https://xylem-california-v1-efb5e6e0e986.srpatlola2020.chatgpt.site/data/counties.geojson?xylem_verify=1794630117162"
+    },
+    {
+      "file": "data/forecast.json",
+      "status": "PASS",
+      "bytes": 165687,
+      "sha256": "ce5f62defd5ed7389b692e2dd22be25476a76c932efb618f802b5d044c3d6a13",
+      "served_url": "https://xylem-california-v1-efb5e6e0e986.srpatlola2020.chatgpt.site/data/forecast.json?xylem_verify=1794630117162"
+    },
+    {
+      "file": "data/gis.json",
+      "status": "PASS",
+      "bytes": 22952,
+      "sha256": "d57e8d7d359154b762d61669c634965cb55c3f243cd0d2e94d44697dc189ccd3",
+      "served_url": "https://xylem-california-v1-efb5e6e0e986.srpatlola2020.chatgpt.site/data/gis.json?xylem_verify=1794630117162"
+    },
+    {
+      "file": "data/infrastructure.json",
+      "status": "PASS",
+      "bytes": 496157,
+      "sha256": "4f363c660f0dff13bb444c8d59f780394815570446ed8b3fdfbd05a4d7fa306d",
+      "served_url": "https://xylem-california-v1-efb5e6e0e986.srpatlola2020.chatgpt.site/data/infrastructure.json?xylem_verify=1794630117162"
+    },
+    {
+      "file": "data/routes.geojson",
+      "status": "PASS",
+      "bytes": 64479,
+      "sha256": "66f02eae22ca93de8dcc4840d79f9a94915bdf53ea63ec634ad0b76752d06449",
+      "served_url": "https://xylem-california-v1-efb5e6e0e986.srpatlola2020.chatgpt.site/data/routes.geojson?xylem_verify=1794630117162"
+    },
+    {
+      "file": "data/routes.json",
+      "status": "PASS",
+      "bytes": 148295,
+      "sha256": "79b37a100bda707cb767a08fb8f770c3476b4e3717f39879e27d099c47fa9a8a",
+      "served_url": "https://xylem-california-v1-efb5e6e0e986.srpatlola2020.chatgpt.site/data/routes.json?xylem_verify=1794630117162"
+    },
+    {
+      "file": "data/snapshot.json",
+      "status": "PASS",
+      "bytes": 1784,
+      "sha256": "4121d2efe14c4649444c0676af3c4eb590a20b71ffbc6461b358e5c0dac4716b",
+      "served_url": "https://xylem-california-v1-efb5e6e0e986.srpatlola2020.chatgpt.site/data/snapshot.json?xylem_verify=1794630117162"
+    },
+    {
+      "file": "data/summary.json",
+      "status": "PASS",
+      "bytes": 12431,
+      "sha256": "cc8d23b9ac0e579b6264f7fbfff9a54dfd9217fee7321b15dbee0adecbc73cc1",
+      "served_url": "https://xylem-california-v1-efb5e6e0e986.srpatlola2020.chatgpt.site/data/summary.json?xylem_verify=1794630117162"
+    },
+    {
+      "file": "data/systems.json",
+      "status": "PASS",
+      "bytes": 458115,
+      "sha256": "e919b4c1be007506111bb93e5a282c84517ffbfef1dad9d940f430b483514562",
+      "served_url": "https://xylem-california-v1-efb5e6e0e986.srpatlola2020.chatgpt.site/data/systems.json?xylem_verify=1794630117162"
+    },
+    {
+      "file": "index.html",
+      "status": "FAIL",
+      "error": "Hosted bytes differ from reviewed candidate"
+    },
+    {
+      "file": "map3d.js",
+      "status": "PASS",
+      "bytes": 22468,
+      "sha256": "4d6f6542e8d2a9bd5771c68d54e5226a71a71939b963d565ebd56f12c9f74651",
+      "served_url": "https://xylem-california-v1-efb5e6e0e986.srpatlola2020.chatgpt.site/map3d.js?xylem_verify=1794630117162"
+    },
+    {
+      "file": "optimizer.js",
+      "status": "PASS",
+      "bytes": 2715,
+      "sha256": "249efcc3e564b7fbdc45180a6b69014c5dcf6260016e09e6259eb2ed7a7ae998",
+      "served_url": "https://xylem-california-v1-efb5e6e0e986.srpatlola2020.chatgpt.site/optimizer.js?xylem_verify=1794630117162"
+    },
+    {
+      "file": "style.css",
+      "status": "PASS",
+      "bytes": 13905,
+      "sha256": "8613c050e1c306291b57151f7020061cfe114980e19eaffda21337bf016b805f",
+      "served_url": "https://xylem-california-v1-efb5e6e0e986.srpatlola2020.chatgpt.site/style.css?xylem_verify=1794630117162"
+    },
+    {
+      "file": "vendor/LEAFLET-LICENSE",
+      "status": "PASS",
+      "bytes": 1395,
+      "sha256": "53e8dc25862014e4324741ca18fbe3611e11d42ef69f59f86ea8c5389647d4cb",
+      "served_url": "https://xylem-california-v1-efb5e6e0e986.srpatlola2020.chatgpt.site/vendor/LEAFLET-LICENSE?xylem_verify=1794630117162"
+    },
+    {
+      "file": "vendor/leaflet.css",
+      "status": "PASS",
+      "bytes": 10879,
+      "sha256": "b570abbda963c60b4de4b4ff4b26f9326f53fb2ccf1461fdf0955ca094fb2539",
+      "served_url": "https://xylem-california-v1-efb5e6e0e986.srpatlola2020.chatgpt.site/vendor/leaflet.css?xylem_verify=1794630117162"
+    },
+    {
+      "file": "vendor/leaflet.js",
+      "status": "PASS",
+      "bytes": 147171,
+      "sha256": "5c9aecfc30e4564519dbdcddcc53a418227dcc7568e619e9762ddcec7609ed47",
+      "served_url": "https://xylem-california-v1-efb5e6e0e986.srpatlola2020.chatgpt.site/vendor/leaflet.js?xylem_verify=1794630117162"
+    },
+    {
+      "file": "vendor/manifest.json",
+      "status": "PASS",
+      "bytes": 1057,
+      "sha256": "ca2b4fc6b861f82ab18d43fcf348fed50ca422936553553c73f3671a9cfb2586",
+      "served_url": "https://xylem-california-v1-efb5e6e0e986.srpatlola2020.chatgpt.site/vendor/manifest.json?xylem_verify=1794630117162"
+    },
+    {
+      "file": "vendor/maplibre-gl.css",
+      "status": "PASS",
+      "bytes": 69422,
+      "sha256": "792ac997dcf6ae6f643eb4e2dee4630c85e7056526bd8fb85ffe83c67d6c41b4",
+      "served_url": "https://xylem-california-v1-efb5e6e0e986.srpatlola2020.chatgpt.site/vendor/maplibre-gl.css?xylem_verify=1794630117162"
+    },
+    {
+      "file": "vendor/maplibre-gl.js",
+      "status": "PASS",
+      "bytes": 939269,
+      "sha256": "07e6ca71a5b6d835a7c3803fb484f0a6e5f0dcbfa131407666edb9e9316564f9",
+      "served_url": "https://xylem-california-v1-efb5e6e0e986.srpatlola2020.chatgpt.site/vendor/maplibre-gl.js?xylem_verify=1794630117162"
+    },
+    {
+      "file": "vendor/MAPLIBRE-LICENSE.txt",
+      "status": "PASS",
+      "bytes": 5984,
+      "sha256": "ee5fc05a0677eaf69601d2c7db0d9ecd6cc27c3abc1d0733bc9ed34707cf8ef2",
+      "served_url": "https://xylem-california-v1-efb5e6e0e986.srpatlola2020.chatgpt.site/vendor/MAPLIBRE-LICENSE.txt?xylem_verify=1794630117162"
+    }
+  ],
+  "browser_smoke_test": "PENDING",
+  "physical_phone_spoken_AT_actual_phone_download": "UNVERIFIED",
+  "recorded_at_utc": "2026-11-14T04:21:58.170Z"
+}

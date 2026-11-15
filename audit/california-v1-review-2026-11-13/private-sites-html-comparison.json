@@ -1,0 +1,18 @@
+{
+  "recorded_at_utc": "2026-11-14T04:28:18.744221+00:00",
+  "strict_served_html_byte_check": "FAIL",
+  "original_application_html_preserved": true,
+  "only_difference": "One added Cloudflare JavaScript Detection script immediately before closing body",
+  "local_bytes": 8903,
+  "served_bytes": 10017,
+  "added_bytes": 1114,
+  "removed_or_changed_original_bytes": 0,
+  "insertion_offset": 8885,
+  "original_sha256": "10d0d73de11d259e9dab6ebce8c60be8d2ecbe3362460bb2b92818d3057b02bd",
+  "served_sha256": "d12e6679862b3587996504b64a1f78f1c7dbb15bbfbab42ff90c2906ee76a966",
+  "added_script_sha256": "5ad1b38ea24bcff3458ccf00f232f76f3a4496698235af86c3f175a925af48a8",
+  "other_23_served_app_files": "PASS; exact bytes in private-sites-hosted-verification-02.json",
+  "hosting_security_changed": false,
+  "source_or_model_changed": false,
+  "strict_gate_exception": "PENDING; do not silently relabel strict byte failure as PASS"
+}

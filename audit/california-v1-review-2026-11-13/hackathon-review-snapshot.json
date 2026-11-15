@@ -1,0 +1,37 @@
+{
+  "surface": "report",
+  "title": "Xylem has a credible prototype; evidence and delivery will decide its submission",
+  "status": "reviewed",
+  "buildStatus": "creating",
+  "generatedAt": "2026-11-14T05:05:46Z",
+  "filters": [],
+  "report": {"asOf": "2026-11-13", "originalQuestion": "How strong is the project for the Xylem hackathon, what issues remain, and what should we do before submission?"},
+  "exportPreferences": {"selected": null, "destinations": []},
+  "queries": {
+    "plans": {
+      "label": "Frozen $500M planning examples",
+      "rows": [
+        {"scenario": "Default priorities", "systems": 97, "smallSystems": 48, "modeledPeople": 476663, "modeledCostUsd": 487919470},
+        {"scenario": "Small-system reserve 30%", "systems": 112, "smallSystems": 70, "modeledPeople": 393742, "modeledCostUsd": 486059328}
+      ],
+      "source": {
+        "label": "Saved demonstration and reconciled desktop exports",
+        "files": ["candidate/audit/DEMO_REVIEW.md", "desktop-review-2026-11-13/checks-progress.json", "private-sites-hosted-csv-reconciliation.json"],
+        "caveats": ["Modeled selected-system population, with overlap unresolved; not measured intervention benefit.", "The reserve is a sequential priority rule, not a globally optimal reserve-constrained solution."],
+        "metricDefinitions": [{"label": "Modeled people", "definition": "Sum of saved populations of selected systems; no person-level deduplication or causal benefit inference.", "componentIds": ["plans-table"]}]
+      }
+    },
+    "findings": {
+      "label": "Material issues and evidence gaps",
+      "rows": [
+        {"priority": "Before submission", "finding": "Verified release hosting is blocked", "type": "Confirmed delivery blocker", "nextAction": "Existing repo admin enables Pages; verify exact source and served bytes."},
+        {"priority": "Before submission", "finding": "CA5610029 is named 10/30/2026", "type": "Confirmed identity defect", "nextAction": "Trace provenance and prepare a separately reviewed display-name correction; preserve model results."},
+        {"priority": "Before submission", "finding": "Slides/video/project publication not verified", "type": "Submission evidence gap", "nextAction": "Complete slides, 3–4 minute video, team/assistance fields and verify published project status."},
+        {"priority": "High value", "finding": "No practitioner or impact validation", "type": "Feasibility evidence gap", "nextAction": "Observe one planning task with a relevant reviewer; record critical feedback."},
+        {"priority": "High value", "finding": "Annual and multi-year risk remain unvalidated", "type": "Known scientific limitation", "nextAction": "Keep claims diagnostic; do not retrain or claim prevention benefit for the deadline."},
+        {"priority": "Before accessibility claims", "finding": "Physical phones and spoken AT remain untested", "type": "Human behavior unverified", "nextAction": "Test real phones, native text settings, speech and saved-file workflows after release gates."}
+      ],
+      "source": {"label": "Current release evidence, official rules, frozen scan and targeted browser observation", "files": ["PRIVATE_PREVIEW_STATUS.md", "project-review-profile.json", "project-review-bad-name-ax.txt", "candidate/PLANNER_EVALUATION.md"], "caveats": ["Priority is a recommended work order, not an official judging score.", "No percentage probability of winning is estimated."]}
+    }
+  }
+}

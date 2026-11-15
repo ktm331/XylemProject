@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "recorded_at_utc": "2026-11-14T04:17:19.807322+00:00",
+  "project_id": "appgprj_6af7df45649c81918b43785b33a7c926",
+  "checkout_path": "C:\\Users\\sai71\\.codex\\visualizations\\2026\\11\\13\\01a1d377-9c26-7a73-b228-eb550dde3ef9\\california-v1-release\\sites-preview",
+  "commit_sha": "6f0cd6f96abcc6d8e10605641e4db24666b57912",
+  "archive": "C:\\Users\\sai71\\.codex\\visualizations\\2026\\11\\13\\01a1d377-9c26-7a73-b228-eb550dde3ef9\\california-v1-release\\private-sites-preview.tar",
+  "original_commit": "2ce2832ffc2be043da6dc194c025d6abdbaf13a1",
+  "ui_build": "efb5e6e0e986178bef4bb6c9d3810854623d0c8947d3ecb631c80accda6c7a1b",
+  "snapshot_id": "806032f64da14561b81c55e72179ec22f299774fa97b9b5f08c4742909f9c0bd",
+  "app_files": 24,
+  "source_blobs_exact": true,
+  "archive_app_files_exact": true,
+  "archive_sha256": "59cd7ebbdfe8a08bd64e474ee90db00bd1596332f6a20676fc8711c5f3178e61",
+  "archive_contains_only": "24 app files and required hosting manifest"
+}

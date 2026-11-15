@@ -1,0 +1,416 @@
+Window: "Xylem: California Water Funding Optimizer - Google Chrome", App: chrome.exe.
+	0 window Xylem: California Water Funding Optimizer - Google Chrome Secondary Actions: Raise
+		1 pane (disabled)
+		2 region Xylem: California Water Funding Optimizer - Google Chrome - Spon (GPT WORK)
+			3 region
+				4 region
+					5 region
+						6 button Minimize ID: view_1
+						1298 button Restore ID: view_3
+						8 button Close ID: view_4
+					9 region
+						10 region
+							11 tool bar ID: view_1000
+								12 button Back ID: view_1001
+								13 button (disabled) Forward ID: view_1002
+								14 button Reload ID: view_1003
+								15 group
+									16 button View site information ID: view_1011
+									17 edit (settable, string) Address and search bar Description: Search Google or type a URL Value: 127.0.0.1:8891/#b=100&l=1&h=5&v=fc&a=0.5&r=0&c=0&m=1 ID: view_1012
+									18 region
+										1303 button Zoom: 200%
+										76 button Bookmark this tab
+								19 region
+									20 button Extensions ID: view_1006
+								21 region
+								22 button Spon (GPT WORK) ID: view_1018
+								23 button Chrome ID: view_1007
+						28 region
+							29 region
+								30 region
+								77 document Xylem: California Water Funding Optimizer Value: http://127.0.0.1:8891/#b=100&l=1&h=5&v=fc&a=0.5&r=0&c=0&m=1 ID: RootWebArea
+									78 link Skip to plan results Value: http://127.0.0.1:8891/#tabbody
+									79 status ID: resultStatus
+										1663 text Plan updated. Budget $100M; 20 systems funded; 171,738 modeled people reached.
+									80 header
+										81 heading Xylem
+										82 text A placement map for water funding: explore modeled California choices.
+										146 text SAFER snapshot 2026-11-02 · 3,186 systems · 1,062 Failing or At-Risk · 1,931,200 people · forecast 806032f64da1 · UI build efb5e6e0e986
+									83 main
+										84 complementary Scenario controls
+											85 heading SCENARIO
+											86 text Forecast weights are diagnostic snapshot estimates. Annual failure probabilities and multi-year conversions remain unvalidated. Reach is modeled, not measured intervention benefit.
+											87 text Funding budget
+											1389 text $100M
+											88 slider (settable, float) Funding budget Value: 26 ID: budget
+											1390 text Range $25M to $5.39B (maximum preset)
+											89 group Budget presets
+												90 button $100M
+												91 button $250M
+												92 button $500M
+												93 button $1B
+												94 button $2B
+												95 button Max
+											96 text Equity priority
+											1391 text 1.0
+											97 slider (settable, float) Equity priority Value: 1 ID: lam
+											98 text Give more weight to disadvantaged communities, affordability, poverty, and environmental burden. 0 removes the equity multiplier; status weights still apply.
+											99 text Small-system priority
+											1392 text 0%
+											100 slider (settable, float) Small-system budget reserve Value: 0 ID: res
+											101 text Share of the budget held for systems with 500 connections or fewer, which a pure people-reached rule tends to skip.
+											102 text Cost assumption
+											1393 text 1.00×
+											103 slider (settable, float) Cost assumption Value: 1 ID: mul
+											104 text Explore lower or higher remediation costs. These are planning estimates, not project quotes.
+											105 button Equal population priority ID: eqZero
+											106 button Emphasize equity ID: eqHigh
+											107 text TEST THE ASSUMPTIONS
+											108 text How often is each system selected when its estimated cost changes?
+											109 button Run 40 cost scenarios ↗ ID: runScen
+											1394 text Controls changed. Run cost scenarios for this plan.
+											111 details
+												112 disclosure triangle At-risk priority +
+													113 text At-risk priority
+													1385 text +
+											115 details
+												116 disclosure triangle Infrastructure routing +
+													117 text Infrastructure routing
+													1386 text +
+											119 details
+												120 disclosure triangle Map layers +
+													121 text Map layers
+													1387 text +
+											123 button Download plan (CSV) ID: export
+											124 button Copy scenario link ID: copy
+											125 button Reset ID: reset
+											126 group ID: copyMsg
+										1395 text Modeled people reached
+										1396 text 171,738
+										1397 text 1.02×
+										1398 text status-first reach (168,274)
+										1399 text Systems funded
+										1400 text 20
+										1401 text of 1,062 · 9 with ≤500 connections
+										1402 text Spent of budget
+										1403 text $98M
+										1404 text budget $100M · $569/person
+										1405 text In disadvantaged areas
+										1406 text 97%
+										1407 text of people reached (DAC or SDAC)
+										1408 text Failing, left unfunded
+										1409 text 406
+										1410 text 256,794 people
+										1411 text Plan robustness
+										1412 text 100%
+										1413 text funded systems that win in ≥50% of 200 stress tests
+										127 combo box (settable, string) Find a water system or PWSID Description: Find a water system or PWSID ID: find
+										128 combo box (settable, string) County spotlight Value: All California ID: spot
+										129 combo box (settable, string) Map colouring Value: Funding plan ID: colorSel
+										130 group Map view
+											131 toggle button 3D terrain
+											132 toggle button 2D map
+										133 application 3D terrain view of the funding plan ID: map3d
+											1261 group
+												1262 region Map
+											1263 button Zoom in Description: Zoom in
+											1264 button Zoom out Description: Zoom out
+											1265 button Reset bearing to north Description: Reset bearing to north
+											1266 details
+												1267 disclosure triangle Toggle attribution Description: Toggle attribution
+											1414 text Budget
+											1415 text $100M
+											1416 text 20
+											1417 text systems funded
+											1418 text 171,738
+											1419 text people reached
+											1269 group
+												1270 text Budget
+												1420 text $100M
+												1272 slider (settable, float) Funding budget Value: 26
+												1273 details
+													1274 disclosure triangle Layers and view −
+														1275 text Layers and view
+														1388 text −
+													1277 combo box (settable, string) Jump to Value: Jump to a city…
+													1278 check box (settable, string) Service-area shading
+													1279 check box (settable, string) Canals, plants, towers
+													1280 check box (settable, string) Buildings
+													1281 check box (settable, string) Systems not funded
+													1282 text Relief
+													1283 slider (settable, float) Relief Value: 1.7999999523162842
+													1284 button Whole state
+										134 tab Plan information
+											135 tab item (selectable) Funded plan ID: tab-plan
+											136 tab item (selectable) Local view ID: tab-spot
+											137 tab item (selectable) Hubs ID: tab-hubs
+											138 tab item (selectable) Left out ID: tab-left
+											139 tab item (selectable) Counties ID: tab-county
+											140 tab item (selectable) Method and tests ID: tab-method
+											141 tab item (selectable) Gaps and prior work ID: tab-gaps
+										142 tab panel Funded plan ID: tabbody
+											1421 text 20 systems, $98M of $100M. Stability is the share of 200 stress-test scenarios (cost errors and weights varied) in which the system is still funded at about $100M.
+											1422 region Funded plan: System table
+												1423 table
+													1424 row
+														1425 column header SYSTEM
+															1426 button SYSTEM
+														1427 column header COUNTY
+															1428 button COUNTY
+														1429 column header STATUS
+															1430 button STATUS
+														1431 column header PEOPLE ▼
+															1432 button PEOPLE ▼
+														1433 column header COST
+															1434 button COST
+														1435 column header $/PERSON
+															1436 button $/PERSON
+														1437 column header STABILITY
+															1438 button STABILITY
+														1439 column header ECONOMIC STATUS
+															1440 button ECONOMIC STATUS
+														1441 column header SOLUTION
+															1442 button SOLUTION
+													1443 row
+														1444 item Lemoore, City Of
+															1445 button Lemoore, City Of
+														1446 item Kings
+														1447 item Failing
+														1448 item 27,185
+														1449 item $13M
+														1450 item $495
+														1451 item 79%
+														1452 item DAC
+														1453 item Modelled average
+													1454 row
+														1455 item Wasco, City Of
+															1456 button Wasco, City Of
+														1457 item Kern
+														1458 item Failing
+														1459 item 22,757
+														1460 item $9.7M
+														1461 item $424
+														1462 item 92%
+														1463 item SDAC
+														1464 item Modelled average
+													1465 row
+														1466 item Kerman, City Of
+															1467 button Kerman, City Of
+														1468 item Fresno
+														1469 item Failing
+														1470 item 17,860
+														1471 item $7.4M
+														1472 item $415
+														1473 item 88%
+														1474 item SDAC
+														1475 item Modelled average
+													1476 row
+														1477 item Bakman Water Company
+															1478 button Bakman Water Company
+														1479 item Fresno
+														1480 item Failing
+														1481 item 17,393
+														1482 item $11M
+														1483 item $621
+														1484 item 78%
+														1485 item SDAC
+														1486 item Modelled average
+													1487 row
+														1488 item City Of Livingston
+															1489 button City Of Livingston
+														1490 item Merced
+														1491 item Failing
+														1492 item 14,894
+														1493 item $6.5M
+														1494 item $436
+														1495 item 90%
+														1496 item DAC
+														1497 item Modelled average
+													1498 row
+														1499 item City Of Parlier
+															1500 button City Of Parlier
+														1501 item Fresno
+														1502 item Failing
+														1503 item 14,576
+														1504 item $11M
+														1505 item $737
+														1506 item 65%
+														1507 item SDAC
+														1508 item Modelled average
+													1509 row
+														1510 item Mcfarland, City Of
+															1511 button Mcfarland, City Of
+														1512 item Kern
+														1513 item Failing
+														1514 item 14,161
+														1515 item $12M
+														1516 item $875
+														1517 item 65%
+														1518 item SDAC
+														1519 item Modelled average
+													1520 row
+														1521 item Avenal, City Of
+															1522 button Avenal, City Of
+														1523 item Kings
+														1524 item Failing
+														1525 item 13,696
+														1526 item $8.4M
+														1527 item $614
+														1528 item 80%
+														1529 item SDAC
+														1530 item Modelled average
+													1531 row
+														1532 item Blythe - City Of
+															1533 button Blythe - City Of
+														1534 item Riverside
+														1535 item Failing
+														1536 item 9,735
+														1537 item $6.1M
+														1538 item $625
+														1539 item 75%
+														1540 item SDAC
+														1541 item Modelled average
+													1542 row
+														1543 item Earlimart Pud
+															1544 button Earlimart Pud
+														1545 item Tulare
+														1546 item Failing
+														1547 item 7,679
+														1548 item $6.1M
+														1549 item $796
+														1550 item 67%
+														1551 item SDAC
+														1552 item Modelled average
+													1553 row
+														1554 item Cutler Pud
+															1555 button Cutler Pud
+														1556 item Tulare
+														1557 item Failing
+														1558 item 6,200
+														1559 item $4.9M
+														1560 item $788
+														1561 item 68%
+														1562 item SDAC
+														1563 item Modelled average
+													1564 row
+														1565 item Rosamond School Water System
+															1566 button Rosamond School Water System
+														1567 item Kern
+														1568 item Failing
+														1569 item 940
+														1570 item $0.2M
+														1571 item $203
+														1572 item 93%
+														1573 item Miss/Indet
+														1574 item Modelled average
+													1575 row
+														1576 item Lakeside School
+															1577 button Lakeside School
+														1578 item Kern
+														1579 item Failing
+														1580 item 897
+														1581 item $0.4M
+														1582 item $425
+														1583 item 82%
+														1584 item Miss/Indet
+														1585 item Modelled average
+													1586 row
+														1587 item Excelsior Middle School
+															1588 button Excelsior Middle School
+														1589 item Contra Costa
+														1590 item Failing
+														1591 item 600
+														1592 item $0.2M
+														1593 item $318
+														1594 item 82%
+														1595 item Miss/Indet
+														1596 item Modelled average
+													1597 row
+														1598 item Bonita School
+															1599 button Bonita School
+														1600 item Santa Barbara
+														1601 item Failing
+														1602 item 589
+														1603 item $0.1M
+														1604 item $162
+														1605 item 98%
+														1606 item Miss/Indet
+														1607 item Modelled average
+													1608 row
+														1609 item Echo Valley School Ws
+															1610 button Echo Valley School Ws
+														1611 item Monterey
+														1612 item Failing
+														1613 item 579
+														1614 item $0.1M
+														1615 item $165
+														1616 item 98%
+														1617 item Miss/Indet
+														1618 item Modelled average
+													1619 row
+														1620 item Meadows Union Elementary School
+															1621 button Meadows Union Elementary School
+														1622 item Imperial
+														1623 item Failing
+														1624 item 550
+														1625 item $0.1M
+														1626 item $173
+														1627 item 97%
+														1628 item Miss/Indet
+														1629 item Modelled average
+													1630 row
+														1631 item Riverview School
+															1632 button Riverview School
+														1633 item Fresno
+														1634 item Failing
+														1635 item 536
+														1636 item $0.1M
+														1637 item $178
+														1638 item 98%
+														1639 item Miss/Indet
+														1640 item Modelled average
+													1641 row
+														1642 item Frazier Mountain High School
+															1643 button Frazier Mountain High School
+														1644 item Kern
+														1645 item Failing
+														1646 item 516
+														1647 item $0.1M
+														1648 item $185
+														1649 item 93%
+														1650 item Miss/Indet
+														1651 item Modelled average
+													1652 row
+														1653 item Alta Elementary School
+															1654 button Alta Elementary School
+														1655 item Fresno
+														1656 item Failing
+														1657 item 395
+														1658 item $0.1M
+														1659 item $242
+														1660 item 91%
+														1661 item Miss/Indet
+														1662 item Modelled average
+									143 footer
+										144 text Data: California State Water Resources Control Board (SAFER Risk Assessment 2024 to 2026, Affordability Assessment, 2024 Cost Assessment, service-area boundaries). Costs are modelled estimates, not quotes.
+										145 link Source Value: https://github.com/palashraks-afk/XylemProject
+								41 region
+							42 region
+						43 region
+							44 region
+								45 button Tab search
+							46 region ID: view_21
+								47 tab
+									48 tab item (selectable) Xylem: California Water Funding Optimizer ID: view_20
+										49 button Close
+								50 region
+							51 button New Tab
+							52 region
+							53 region
+								54 button Open Gemini in Chrome
+								55 region
+						56 region
+
+Document text: ```
+127.0.0.1:8891/#b=100&l=1&h=5&v=fc&a=0.5&r=0&c=0&m=1
+```

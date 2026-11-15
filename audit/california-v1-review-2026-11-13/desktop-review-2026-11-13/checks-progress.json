@@ -1,0 +1,300 @@
+{
+  "started": "2026-11-14T03:37:32.265Z",
+  "commit": "2ce2832ffc2be043da6dc194c025d6abdbaf13a1",
+  "scope": "Agent-operated visible desktop checks; no physical-phone or spoken-screen-reader claim",
+  "checks": [
+    {
+      "name": "Default $100M",
+      "status": "PASS",
+      "observed": {
+        "controls": [
+          {
+            "id": "budget",
+            "max": "100",
+            "min": "0",
+            "step": "1",
+            "value": "26"
+          },
+          {
+            "id": "lam",
+            "max": "3",
+            "min": "0",
+            "step": "0.1",
+            "value": "1"
+          },
+          {
+            "id": "res",
+            "max": "0.6",
+            "min": "0",
+            "step": "0.05",
+            "value": "0"
+          },
+          {
+            "id": "mul",
+            "max": "2",
+            "min": "0.5",
+            "step": "0.05",
+            "value": "1"
+          },
+          {
+            "id": "hor",
+            "max": "10",
+            "min": "1",
+            "step": "1",
+            "value": "5"
+          },
+          {
+            "id": "arw",
+            "max": "1",
+            "min": "0.1",
+            "step": "0.05",
+            "value": "0.5"
+          }
+        ],
+        "detailHidden": true,
+        "focused": "BUTTON",
+        "header": "SAFER snapshot 2026-11-02 · 3,186 systems · 1,062 Failing or At-Risk · 1,931,200 people · forecast 806032f64da1 · UI build efb5e6e0e986",
+        "kpis": "Modeled people reached\n171,738\n1.02× status-first reach (168,274)\nSystems funded\n20\nof 1,062 · 9 with ≤500 connections\nSpent of budget\n$98M\nbudget $100M · $569/person\nIn disadvantaged areas\n97%\nof people reached (DAC or SDAC)\nFailing, left unfunded\n406\n256,794 people\nPlan robustness\n100%\nfunded systems that win in ≥50% of 200 stress tests",
+        "scenario": "#b=100&l=1&h=5&v=fc&a=0.5&r=0&c=0&m=1"
+      }
+    },
+    {
+      "name": "Default $500M",
+      "status": "PASS",
+      "observed": {
+        "controls": [
+          {
+            "id": "budget",
+            "max": "100",
+            "min": "0",
+            "step": "1",
+            "value": "56"
+          },
+          {
+            "id": "lam",
+            "max": "3",
+            "min": "0",
+            "step": "0.1",
+            "value": "1"
+          },
+          {
+            "id": "res",
+            "max": "0.6",
+            "min": "0",
+            "step": "0.05",
+            "value": "0"
+          },
+          {
+            "id": "mul",
+            "max": "2",
+            "min": "0.5",
+            "step": "0.05",
+            "value": "1"
+          },
+          {
+            "id": "hor",
+            "max": "10",
+            "min": "1",
+            "step": "1",
+            "value": "5"
+          },
+          {
+            "id": "arw",
+            "max": "1",
+            "min": "0.1",
+            "step": "0.05",
+            "value": "0.5"
+          }
+        ],
+        "detailHidden": true,
+        "focused": "BUTTON",
+        "header": "SAFER snapshot 2026-11-02 · 3,186 systems · 1,062 Failing or At-Risk · 1,931,200 people · forecast 806032f64da1 · UI build efb5e6e0e986",
+        "kpis": "Modeled people reached\n476,663\n1.33× status-first reach (358,300)\nSystems funded\n97\nof 1,062 · 48 with ≤500 connections\nSpent of budget\n$488M\nbudget $500M · $1,024/person\nIn disadvantaged areas\n77%\nof people reached (DAC or SDAC)\nFailing, left unfunded\n343\n76,947 people\nPlan robustness\n96%\nfunded systems that win in ≥50% of 200 stress tests",
+        "scenario": "#b=500&l=1&h=5&v=fc&a=0.5&r=0&c=0&m=1"
+      }
+    },
+    {
+      "name": "30% reserve via range keyboard",
+      "status": "PASS",
+      "observed": {
+        "controls": [
+          {
+            "id": "budget",
+            "max": "100",
+            "min": "0",
+            "step": "1",
+            "value": "56"
+          },
+          {
+            "id": "lam",
+            "max": "3",
+            "min": "0",
+            "step": "0.1",
+            "value": "1"
+          },
+          {
+            "id": "res",
+            "max": "0.6",
+            "min": "0",
+            "step": "0.05",
+            "value": "0.3"
+          },
+          {
+            "id": "mul",
+            "max": "2",
+            "min": "0.5",
+            "step": "0.05",
+            "value": "1"
+          },
+          {
+            "id": "hor",
+            "max": "10",
+            "min": "1",
+            "step": "1",
+            "value": "5"
+          },
+          {
+            "id": "arw",
+            "max": "1",
+            "min": "0.1",
+            "step": "0.05",
+            "value": "0.5"
+          }
+        ],
+        "detailHidden": true,
+        "focused": "res",
+        "header": "SAFER snapshot 2026-11-02 · 3,186 systems · 1,062 Failing or At-Risk · 1,931,200 people · forecast 806032f64da1 · UI build efb5e6e0e986",
+        "kpis": "Modeled people reached\n393,742\n1.10× status-first reach (358,300)\nSystems funded\n112\nof 1,062 · 70 with ≤500 connections\nSpent of budget\n$486M\nbudget $500M · $1,234/person\nIn disadvantaged areas\n75%\nof people reached (DAC or SDAC)\nFailing, left unfunded\n328\n76,367 people\nPlan robustness\nn/a\nstored stability unavailable for these controls; run cost scenarios",
+        "scenario": "#b=500&l=1&h=5&v=fc&a=0.5&r=0.3&c=0&m=1"
+      }
+    },
+    {
+      "name": "System opens by keyboard with heading focus",
+      "status": "PASS",
+      "focus": {
+        "id": "detailTitle",
+        "outline": "rgb(7, 95, 193) solid 3px",
+        "outlineWidth": "3px",
+        "system": null,
+        "tag": "H3",
+        "text": "Lemoore, City Of"
+      },
+      "detail": "CA1610005 · KINGS COUNTY\nLemoore, City Of\n×\nFailing · 27,185 people served · 7,474 connections · DAC\nIn this plan\nSelected\nEstimated cost\n$13M\nIllustrative cost range\n$6.7M–$27M\nWeighted priority score\n40,572\nSelected when costs vary\nrun the scenarios\nConsolidation: not eligible under the state's size rules\nIssue: TOTAL HALOACETIC ACIDS (HAA5); TTHM"
+    },
+    {
+      "name": "Tab from system heading reaches Close",
+      "status": "PASS",
+      "focus": {
+        "id": "detailX",
+        "outline": "rgb(7, 95, 193) solid 3px",
+        "outlineWidth": "3px",
+        "system": null,
+        "tag": "BUTTON",
+        "text": "×"
+      }
+    },
+    {
+      "name": "Keyboard close returns to invoking system",
+      "status": "PASS",
+      "focus": {
+        "id": "",
+        "outline": "rgb(7, 95, 193) solid 3px",
+        "outlineWidth": "3px",
+        "system": "CA1610005",
+        "tag": "BUTTON",
+        "text": "Lemoore, City Of"
+      }
+    },
+    {
+      "name": "Fixed At-Risk share 50% at $500M",
+      "status": "PASS",
+      "observed": {
+        "controls": [
+          {
+            "id": "budget",
+            "max": "100",
+            "min": "0",
+            "step": "1",
+            "value": "56"
+          },
+          {
+            "id": "lam",
+            "max": "3",
+            "min": "0",
+            "step": "0.1",
+            "value": "1"
+          },
+          {
+            "id": "res",
+            "max": "0.6",
+            "min": "0",
+            "step": "0.05",
+            "value": "0"
+          },
+          {
+            "id": "mul",
+            "max": "2",
+            "min": "0.5",
+            "step": "0.05",
+            "value": "1"
+          },
+          {
+            "id": "hor",
+            "max": "10",
+            "min": "1",
+            "step": "1",
+            "value": "5"
+          },
+          {
+            "id": "arw",
+            "max": "1",
+            "min": "0.1",
+            "step": "0.05",
+            "value": "0.5"
+          }
+        ],
+        "detailHidden": true,
+        "focused": "BUTTON",
+        "header": "SAFER snapshot 2026-11-02 · 3,186 systems · 1,062 Failing or At-Risk · 1,931,200 people · forecast 806032f64da1 · UI build efb5e6e0e986",
+        "kpis": "Modeled people reached\n966,559\n2.70× status-first reach (358,300)\nSystems funded\n54\nof 1,062 · 17 with ≤500 connections\nSpent of budget\n$493M\nbudget $500M · $510/person\nIn disadvantaged areas\n98%\nof people reached (DAC or SDAC)\nFailing, left unfunded\n396\n207,535 people\nPlan robustness\nn/a\nstored stability unavailable for these controls; run cost scenarios",
+        "scenario": "#b=500&l=1&h=5&v=fixed&a=0.5&r=0&c=0&m=1"
+      }
+    },
+    {
+      "name": "Desktop CSV download for fixed-share plan",
+      "status": "PASS",
+      "originalPath": "C:\\Users\\sai71\\Downloads\\xylem-placement-plan (2).csv",
+      "savedCopy": "C:/Users/sai71/.codex/visualizations/2026/11/13/01a1d377-9c26-7a73-b228-eb550dde3ef9/california-v1-release/desktop-review-2026-11-13/fixed-share-500M.csv",
+      "metadata": [
+        "# Budget_USD 500000000; selected_systems 54; modeled_people 966559; modeled_cost_usd 493070597; scenario b=500&l=1&h=5&v=fixed&a=0.5&r=0&c=0&m=1; stability_budget_musd unavailable",
+        "# Snapshot 806032f64da14561b81c55e72179ec22f299774fa97b9b5f08c4742909f9c0bd; UI_build efb5e6e0e986178bef4bb6c9d3810854623d0c8947d3ecb631c80accda6c7a1b; diagnostic snapshot estimates; annual failure probabilities and constant-annual-risk horizon conversion unvalidated.",
+        "# Xylem placement plan: budget $500M, equity 1, fixed At-Risk share 50%, small-system reserve 0%, routes 0, cost multiplier 1; stability unavailable for these controls; reach is modeled population, not measured intervention benefit; costs modeled; routes approximate"
+      ]
+    },
+    {
+      "name": "Fixed-share system detail",
+      "status": "PASS",
+      "detail": "CA1910092 · LOS ANGELES COUNTY\nMonterey Park-City, Water Dept.\n×\nAt-Risk · 61,096 people served · 13,361 connections · DAC\nIn this plan\nSelected\nEstimated cost\n$29M\nIllustrative cost range\n$14M–$58M\nWeighted priority score\n49,006\nDiagnostic violation estimate (unvalidated)\n0%\nSelected when costs vary\nrun the scenarios\nConsolidation: not eligible under the state's size rules",
+      "focus": {
+        "id": "detailTitle",
+        "outline": "rgb(7, 95, 193) solid 3px",
+        "outlineWidth": "3px",
+        "system": null,
+        "tag": "H3",
+        "text": "Monterey Park-City, Water Dept."
+      }
+    },
+    {
+      "name": "Fixed-share detail close returns to system",
+      "status": "PASS",
+      "focus": {
+        "id": "",
+        "outline": "rgb(7, 95, 193) solid 3px",
+        "outlineWidth": "3px",
+        "system": "CA1910092",
+        "tag": "BUTTON",
+        "text": "Monterey Park-City, Water Dept."
+      }
+    }
+  ]
+}

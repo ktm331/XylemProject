@@ -1,0 +1,8 @@
+{
+  "recorded_at_utc": "2026-11-13T06:12:57.856884+00:00",
+  "scope": "Read-only existing Git credential and repository access check",
+  "credentials_disclosed": false,
+  "mutation": "NONE",
+  "existing_credential_available": false,
+  "status": "NO_EXISTING_CREDENTIAL"
+}

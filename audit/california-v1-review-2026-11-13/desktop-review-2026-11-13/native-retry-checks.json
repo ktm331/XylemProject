@@ -1,0 +1,78 @@
+{
+  "completed_at_utc": "2026-11-14T04:02:56.817Z",
+  "scope": "Agent-operated native Windows desktop review; Chrome 200% page zoom and actual Notepad file opening",
+  "commit": "2ce2832ffc2be043da6dc194c025d6abdbaf13a1",
+  "ui_build": "efb5e6e0e986178bef4bb6c9d3810854623d0c8947d3ecb631c80accda6c7a1b",
+  "final_results": {
+    "native_chrome_zoom_200": "PASS",
+    "budget_control_at_200": "PASS after settled UI redraw",
+    "browser_restored": "100% zoom, original window size, default $500M plan",
+    "actual_csv_open_in_notepad": "PASS by filename and screenshot inspection",
+    "csv_unchanged_after_open": "PASS"
+  },
+  "csv": {
+    "path": "C:/Users/sai71/Downloads/xylem-placement-plan (2).csv",
+    "sha256": "066cc95b176f228ae3892581f27f493cefbf204e2798382b6dfecc219cd95e6b",
+    "systems": 54,
+    "modeled_people": 966559,
+    "modeled_cost_usd": 493070597,
+    "scenario": "$500M, fixed share 50%, equity 1, reserve 0%, routes off, cost multiplier 1"
+  },
+  "attempts": [
+    {
+      "name": "Chrome native page zoom 200%",
+      "zoomText": "\t\t\t\t\t\t\t\t\t\t1303 button Zoom: 200%",
+      "scope": "Native Chrome shortcut and accessibility/screenshot observation, not physical-phone text scaling",
+      "status": "PASS",
+      "observations": "Confirmed 200% Chrome zoom; header, controls, totals and map overlays readable, with budget preset interaction confirmed after settled redraw"
+    },
+    {
+      "name": "Budget preset operable at native 200% zoom",
+      "status": "FAIL",
+      "observed": "$100M preset selected; 171,738 modeled people in native tree"
+    },
+    {
+      "name": "Budget preset at 200%, settled native tree recheck",
+      "status": "PASS",
+      "note": "The immediate AX snapshot preceded the queued UI redraw; the prior screenshot already showed the correct 20 / 171,738 result."
+    },
+    {
+      "name": "Restore original browser zoom and plan",
+      "status": "PASS",
+      "zoom": "100%",
+      "budget": "$500M",
+      "people": 476663,
+      "window": "Restored from maximized"
+    },
+    {
+      "name": "Open actual Downloads CSV in Notepad",
+      "status": "FAIL",
+      "title": "xylem-placement-plan (2).csv - Notepad",
+      "source": "C:\\Users\\sai71\\Downloads\\xylem-placement-plan (2).csv",
+      "observed": "Visible metadata: 54 systems; 966559 modeled people; 493070597 modeled cost; fixed share 50%; matching UI/snapshot IDs"
+    },
+    {
+      "name": "CSV viewer visual confirmation",
+      "status": "PASS",
+      "title": "xylem-placement-plan (2).csv - Notepad",
+      "assessment": "Screenshot inspection of actual Notepad file, supported by matching filename and unchanged file hash",
+      "metadata": {
+        "budget": 500000000,
+        "systems": 54,
+        "people": 966559,
+        "cost": 493070597,
+        "fixedShare": "50%",
+        "build": "efb5e6e0e986178bef4bb6c9d3810854623d0c8947d3ecb631c80accda6c7a1b"
+      },
+      "note": "Notepad does not expose its document body through this UIA snapshot; the UIA-only assertion is retained separately and does not establish a document or app defect."
+    }
+  ],
+  "observation_limits": [
+    "Immediate AX snapshot on first native budget click preceded queued redraw; screenshot and settled recheck confirmed correct result. Initial failed read retained.",
+    "Notepad did not expose its document body in this UIA capture. UIA-only metadata assertion retained; filename and screenshot verified the actual file and metadata.",
+    "No 400% zoom, physical-phone, OS text scaling, spoken VoiceOver/TalkBack or phone-download pass claimed."
+  ],
+  "source_changes": "NONE",
+  "pushes": "NONE",
+  "deployment_or_upload": "NONE"
+}

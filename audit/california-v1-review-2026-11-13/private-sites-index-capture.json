@@ -1,0 +1,29 @@
+{
+  "status": "CAPTURED",
+  "http_url": "https://xylem-california-v1-efb5e6e0e986.srpatlola2020.chatgpt.site/?xylem_verify=1794630235255",
+  "served_bytes": 10017,
+  "local_bytes": 8903,
+  "served_sha256": "d12e6679862b3587996504b64a1f78f1c7dbb15bbfbab42ff90c2906ee76a966",
+  "local_sha256": "10d0d73de11d259e9dab6ebce8c60be8d2ecbe3362460bb2b92818d3057b02bd",
+  "script_tags": [
+    {
+      "src": "https://xylem-california-v1-efb5e6e0e986.srpatlola2020.chatgpt.site/vendor/leaflet.js"
+    },
+    {
+      "src": "https://xylem-california-v1-efb5e6e0e986.srpatlola2020.chatgpt.site/vendor/maplibre-gl.js"
+    },
+    {
+      "src": "https://xylem-california-v1-efb5e6e0e986.srpatlola2020.chatgpt.site/optimizer.js"
+    },
+    {
+      "src": "https://xylem-california-v1-efb5e6e0e986.srpatlola2020.chatgpt.site/map3d.js"
+    },
+    {
+      "src": "https://xylem-california-v1-efb5e6e0e986.srpatlola2020.chatgpt.site/app.js"
+    },
+    {
+      "inline": true
+    }
+  ],
+  "credential_recorded": false
+}

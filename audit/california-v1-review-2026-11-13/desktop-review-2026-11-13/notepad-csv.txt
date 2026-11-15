@@ -1,0 +1,73 @@
+Window: "Untitled - Notepad", App: Notepad.exe.
+	0 window Untitled - Notepad Secondary Actions: Raise
+		13 pane
+			14 pane
+				15 tab ID: Tabs
+					16 list ID: TabListView
+						17 tab item (selectable) ss.html. Unmodified.
+							18 text ss.html
+						19 tab item (selectable) monte.txt. Unmodified.
+							90 text monte.txt
+						21 tab item (selectable) 635152829_1300540021896311_6570599155696251005_n_. Unmodified.
+							22 text 635152829_1300540021896311_6570599155696251005_n_
+						23 tab item (selectable) serve.ps1. Unmodified.
+							24 text serve.ps1
+						25 tab item (selectable) serve.ps1. Unmodified.
+							26 text serve.ps1
+						27 tab item (selectable) Start-App.ps1. Unmodified.
+							28 text Start-App.ps1
+						29 tab item (selectable) launch.ps1. Unmodified.
+							30 text launch.ps1
+						31 tab item (selectable) Start-App.ps1. Unmodified.
+							32 text Start-App.ps1
+						33 tab item (selectable) launch.ps1. Unmodified.
+							34 text launch.ps1
+						35 tab item (selectable) npm.ps1. Unmodified.
+							36 text npm.ps1
+						37 tab item (selectable) SquirrelSetup.log. Unmodified.
+							38 text SquirrelSetup.log
+						39 tab item (selectable) Start-App.ps1. Unmodified.
+							40 text Start-App.ps1
+						41 tab item (selectable) 738796798_1606220761178392_6396766647720455369_n_ (7). Unmodified.
+							42 text 738796798_1606220761178392_6396766647720455369_n_ (7)
+						43 tab item (selectable) probe.txt. Unmodified.
+							44 text probe.txt
+						45 tab item (selectable) launch.ps1. Unmodified.
+							46 text launch.ps1
+						47 tab item (selectable) OWNER-APPROVAL-PACKET.txt. Unmodified.
+							48 text OWNER-APPROVAL-PACKET.txt
+						91 tab item (selectable) Untitled. Unmodified.
+							20 text Untitled
+						258 tab item (selectable) xylem-placement-plan (2).csv. Unmodified.
+							259 text xylem-placement-plan (2).csv
+							260 button Close Tab ID: CloseButton
+					50 button Add New Tab ID: AddButton
+		51 pane
+			52 pane
+				53 menu bar ID: MenuBar
+					54 menu item File ID: File
+					55 menu item Edit ID: Edit
+					56 menu item View ID: View
+				65 button Writing tools ID: RewriteDropDownButton
+				66 button What's new ID: FREButton
+				67 button User avatar ID: AvatarButton
+				70 button Settings ID: SettingsButton
+				71 window Secondary Actions: Raise ID: PrivacyTeachingTip
+				72 pane ID: PsDownloadDetailTeachingTip
+				73 pane Local AI model must complete downloading to use this feature while signed out. ID: PsDownloadLightTeachingTip
+		74 pane (disabled)
+			75 pane (disabled)
+				76 text Line 1, Column 1 ID: ContentTextBlock
+				77 text 9,116 characters ID: ContentTextBlock
+				78 text Plain text ID: ContentTextBlock
+				79 text Zoom ID: ContentTextBlock
+				80 text Unix (LF) ID: ContentTextBlock
+				81 text UTF-8 ID: ContentTextBlock
+		82 title bar (settable, string) Value: xylem-placement-plan (2).csv - Notepad
+			83 menu bar System ID: MenuBar
+				84 menu item System
+			85 button Minimize
+			86 button Maximize
+			87 button Close
+
+The focused UI element is 14 pane.

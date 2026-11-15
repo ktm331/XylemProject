@@ -1,0 +1,36 @@
+{
+  "checked_at_utc": "2026-11-14T05:05:46.603678+00:00",
+  "scope": "Read-only full scan of the frozen app systems; not validation of source-field truth",
+  "ui_build": "efb5e6e0e986178bef4bb6c9d3810854623d0c8947d3ecb631c80accda6c7a1b",
+  "snapshot_id": "806032f64da14561b81c55e72179ec22f299774fa97b9b5f08c4742909f9c0bd",
+  "systems": 1062,
+  "unique_ids": 1062,
+  "modeled_population_sum_not_deduplicated": 1931200,
+  "missing_or_zero_coordinates": [],
+  "missing_at_risk_forecast": [],
+  "duplicate_search_labels": {},
+  "date_shaped_system_names": [
+    {
+      "id": "CA5610029",
+      "name": "10/30/2026",
+      "county": "Ventura",
+      "pop": 1820,
+      "conn": 336
+    }
+  ],
+  "date_shaped_names_in_default_500M_plan": [
+    {
+      "id": "CA5610029",
+      "name": "10/30/2026",
+      "county": "Ventura",
+      "pop": 1820,
+      "conn": 336
+    }
+  ],
+  "invalid_population_or_connections": [],
+  "spreadsheet_formula_leading_names": [],
+  "app_total_bytes": 2973375,
+  "root_license_files": [],
+  "candidate_systems_sha256": "e919b4c1be007506111bb93e5a282c84517ffbfef1dad9d940f430b483514562",
+  "frozen_files_modified": false
+}

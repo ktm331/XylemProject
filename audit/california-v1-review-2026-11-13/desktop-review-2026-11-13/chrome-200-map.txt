@@ -1,0 +1,1264 @@
+Window: "Xylem: California Water Funding Optimizer - Google Chrome", App: chrome.exe.
+	0 window Xylem: California Water Funding Optimizer - Google Chrome Secondary Actions: Raise
+		1 pane (disabled)
+		2 region Xylem: California Water Funding Optimizer - Google Chrome - Spon (GPT WORK)
+			3 region
+				4 region
+					5 region
+						6 button Minimize ID: view_1
+						1298 button Restore ID: view_3
+						8 button Close ID: view_4
+					9 region
+						10 region
+							11 tool bar ID: view_1000
+								12 button Back ID: view_1001
+								13 button (disabled) Forward ID: view_1002
+								14 button Reload ID: view_1003
+								15 group
+									16 button View site information ID: view_1011
+									17 edit (settable, string) Address and search bar Description: Search Google or type a URL Value: 127.0.0.1:8891 ID: view_1012
+									18 region
+										1303 button Zoom: 200%
+										76 button Bookmark this tab
+								19 region
+									20 button Extensions ID: view_1006
+								21 region
+								22 button Spon (GPT WORK) ID: view_1018
+								23 button Chrome ID: view_1007
+						28 region
+							29 region
+								30 region
+								77 document Xylem: California Water Funding Optimizer Value: http://127.0.0.1:8891/ ID: RootWebArea
+									78 link Skip to plan results Value: http://127.0.0.1:8891/#tabbody
+									79 status ID: resultStatus
+									80 header
+										81 heading Xylem
+										82 text A placement map for water funding: explore modeled California choices.
+										146 text SAFER snapshot 2026-11-02 · 3,186 systems · 1,062 Failing or At-Risk · 1,931,200 people · forecast 806032f64da1 · UI build efb5e6e0e986
+									83 main
+										84 complementary Scenario controls
+											85 heading SCENARIO
+											86 text Forecast weights are diagnostic snapshot estimates. Annual failure probabilities and multi-year conversions remain unvalidated. Reach is modeled, not measured intervention benefit.
+											87 text Funding budget
+											147 text $500M
+											88 slider (settable, float) Funding budget Value: 56 ID: budget
+											148 text Range $25M to $5.39B (maximum preset)
+											89 group Budget presets
+												90 button $100M
+												91 button $250M
+												92 button $500M
+												93 button $1B
+												94 button $2B
+												95 button Max
+											96 text Equity priority
+											149 text 1.0
+											97 slider (settable, float) Equity priority Value: 1 ID: lam
+											98 text Give more weight to disadvantaged communities, affordability, poverty, and environmental burden. 0 removes the equity multiplier; status weights still apply.
+											99 text Small-system priority
+											150 text 0%
+											100 slider (settable, float) Small-system budget reserve Value: 0 ID: res
+											101 text Share of the budget held for systems with 500 connections or fewer, which a pure people-reached rule tends to skip.
+											102 text Cost assumption
+											151 text 1.00×
+											103 slider (settable, float) Cost assumption Value: 1 ID: mul
+											104 text Explore lower or higher remediation costs. These are planning estimates, not project quotes.
+											105 button Equal population priority ID: eqZero
+											106 button Emphasize equity ID: eqHigh
+											107 text TEST THE ASSUMPTIONS
+											108 text How often is each system selected when its estimated cost changes?
+											109 button Run 40 cost scenarios ↗ ID: runScen
+											110 text Uses your current budget and priorities.
+											111 details
+												112 disclosure triangle At-risk priority +
+													113 text At-risk priority
+													1385 text +
+											115 details
+												116 disclosure triangle Infrastructure routing +
+													117 text Infrastructure routing
+													1386 text +
+											119 details
+												120 disclosure triangle Map layers +
+													121 text Map layers
+													1387 text +
+											123 button Download plan (CSV) ID: export
+											124 button Copy scenario link ID: copy
+											125 button Reset ID: reset
+											126 group ID: copyMsg
+										152 text Modeled people reached
+										153 text 476,663
+										154 text 1.33×
+										155 text status-first reach (358,300)
+										156 text Systems funded
+										157 text 97
+										158 text of 1,062 · 48 with ≤500 connections
+										159 text Spent of budget
+										160 text $488M
+										161 text budget $500M · $1,024/person
+										162 text In disadvantaged areas
+										163 text 77%
+										164 text of people reached (DAC or SDAC)
+										165 text Failing, left unfunded
+										166 text 343
+										167 text 76,947 people
+										168 text Plan robustness
+										169 text 96%
+										170 text funded systems that win in ≥50% of 200 stress tests
+										127 combo box (settable, string) Find a water system or PWSID Description: Find a water system or PWSID ID: find
+										128 combo box (settable, string) County spotlight Value: All California ID: spot
+										129 combo box (settable, string) Map colouring Value: Funding plan ID: colorSel
+										130 group Map view
+											131 toggle button 3D terrain
+											132 toggle button 2D map
+										133 application 3D terrain view of the funding plan ID: map3d
+											1261 group
+												1262 region Map
+											1263 button Zoom in Description: Zoom in
+											1264 button Zoom out Description: Zoom out
+											1265 button Reset bearing to north Description: Reset bearing to north
+											1266 details
+												1267 disclosure triangle Toggle attribution Description: Toggle attribution
+											1291 text Budget
+											1292 text $500M
+											1293 text 97
+											1294 text systems funded
+											1295 text 476,663
+											1296 text people reached
+											1269 group
+												1270 text Budget
+												1297 text $500M
+												1272 slider (settable, float) Funding budget Value: 56
+												1273 details
+													1274 disclosure triangle Layers and view −
+														1275 text Layers and view
+														1388 text −
+													1277 combo box (settable, string) Jump to Value: Jump to a city…
+													1278 check box (settable, string) Service-area shading
+													1279 check box (settable, string) Canals, plants, towers
+													1280 check box (settable, string) Buildings
+													1281 check box (settable, string) Systems not funded
+													1282 text Relief
+													1283 slider (settable, float) Relief Value: 1.7999999523162842
+													1284 button Whole state
+										134 tab Plan information
+											135 tab item (selectable) Funded plan ID: tab-plan
+											136 tab item (selectable) Local view ID: tab-spot
+											137 tab item (selectable) Hubs ID: tab-hubs
+											138 tab item (selectable) Left out ID: tab-left
+											139 tab item (selectable) Counties ID: tab-county
+											140 tab item (selectable) Method and tests ID: tab-method
+											141 tab item (selectable) Gaps and prior work ID: tab-gaps
+										142 tab panel Funded plan ID: tabbody
+											172 text 97 systems, $488M of $500M. Stability is the share of 200 stress-test scenarios (cost errors and weights varied) in which the system is still funded at about $500M.
+											173 region Funded plan: System table
+												174 table
+													175 row
+														176 column header SYSTEM
+															177 button SYSTEM
+														178 column header COUNTY
+															179 button COUNTY
+														180 column header STATUS
+															181 button STATUS
+														182 column header PEOPLE ▼
+															183 button PEOPLE ▼
+														184 column header COST
+															185 button COST
+														186 column header $/PERSON
+															187 button $/PERSON
+														188 column header STABILITY
+															189 button STABILITY
+														190 column header ECONOMIC STATUS
+															191 button ECONOMIC STATUS
+														192 column header SOLUTION
+															193 button SOLUTION
+													194 row
+														195 item Coachella Water Authority
+															196 button Coachella Water Authority
+														197 item Riverside
+														198 item At-Risk
+														199 item 43,590
+														200 item $21M
+														201 item $474
+														202 item 64%
+														203 item DAC
+														204 item Modelled average
+													205 row
+														206 item Calexico, City Of
+															207 button Calexico, City Of
+														208 item Imperial
+														209 item At-Risk
+														210 item 40,357
+														211 item $19M
+														212 item $461
+														213 item 50%
+														214 item SDAC
+														215 item Modelled average
+													216 row
+														217 item Lemoore, City Of
+															218 button Lemoore, City Of
+														219 item Kings
+														220 item Failing
+														221 item 27,185
+														222 item $13M
+														223 item $495
+														224 item 100%
+														225 item DAC
+														226 item Modelled average
+													227 row
+														228 item Wasco, City Of
+															229 button Wasco, City Of
+														230 item Kern
+														231 item Failing
+														232 item 22,757
+														233 item $9.7M
+														234 item $424
+														235 item 100%
+														236 item SDAC
+														237 item Modelled average
+													238 row
+														239 item Kerman, City Of
+															240 button Kerman, City Of
+														241 item Fresno
+														242 item Failing
+														243 item 17,860
+														244 item $7.4M
+														245 item $415
+														246 item 100%
+														247 item SDAC
+														248 item Modelled average
+													249 row
+														250 item Bakman Water Company
+															251 button Bakman Water Company
+														252 item Fresno
+														253 item Failing
+														254 item 17,393
+														255 item $11M
+														256 item $621
+														257 item 100%
+														258 item SDAC
+														259 item Modelled average
+													260 row
+														261 item City Of Livingston
+															262 button City Of Livingston
+														263 item Merced
+														264 item Failing
+														265 item 14,894
+														266 item $6.5M
+														267 item $436
+														268 item 100%
+														269 item DAC
+														270 item Modelled average
+													271 row
+														272 item City Of Parlier
+															273 button City Of Parlier
+														274 item Fresno
+														275 item Failing
+														276 item 14,576
+														277 item $11M
+														278 item $737
+														279 item 99%
+														280 item SDAC
+														281 item Modelled average
+													282 row
+														283 item Mcfarland, City Of
+															284 button Mcfarland, City Of
+														285 item Kern
+														286 item Failing
+														287 item 14,161
+														288 item $12M
+														289 item $875
+														290 item 99%
+														291 item SDAC
+														292 item Modelled average
+													293 row
+														294 item Avenal, City Of
+															295 button Avenal, City Of
+														296 item Kings
+														297 item Failing
+														298 item 13,696
+														299 item $8.4M
+														300 item $614
+														301 item 100%
+														302 item SDAC
+														303 item Modelled average
+													304 row
+														305 item Sbdno County Service Area 70J
+															306 button Sbdno County Service Area 70J
+														307 item San Bernardino
+														308 item At-Risk
+														309 item 12,895
+														310 item $7.5M
+														311 item $582
+														312 item 94%
+														313 item Non-DAC
+														314 item Modelled average
+													315 row
+														316 item Lindsay, City Of
+															317 button Lindsay, City Of
+														318 item Tulare
+														319 item Failing
+														320 item 12,659
+														321 item $12M
+														322 item $978
+														323 item 97%
+														324 item SDAC
+														325 item Modelled average
+													326 row
+														327 item Signal Hill - City, Water Dept.
+															328 button Signal Hill - City, Water Dept.
+														329 item Los Angeles
+														330 item Failing
+														331 item 11,848
+														332 item $12M
+														333 item $1,016
+														334 item 94%
+														335 item Non-DAC
+														336 item Modelled average
+													337 row
+														338 item Exeter, City Of
+															339 button Exeter, City Of
+														340 item Tulare
+														341 item At-Risk
+														342 item 11,169
+														343 item $7.5M
+														344 item $674
+														345 item 86%
+														346 item DAC
+														347 item Modelled average
+													348 row
+														349 item California Institution For Men
+															350 button California Institution For Men
+														351 item San Bernardino
+														352 item Failing
+														353 item 10,667
+														354 item $7.6M
+														355 item $710
+														356 item 99%
+														357 item Miss/Indet
+														358 item Modelled average
+													359 row
+														360 item Cal-Am Water Company - East Pasadena
+															361 button Cal-Am Water Company - East Pasadena
+														362 item Los Angeles
+														363 item Failing
+														364 item 9,963
+														365 item $12M
+														366 item $1,200
+														367 item 94%
+														368 item Non-DAC
+														369 item Modelled average
+													370 row
+														371 item Winton Water & Sanitary Dist
+															372 button Winton Water & Sanitary Dist
+														373 item Merced
+														374 item Failing
+														375 item 9,745
+														376 item $11M
+														377 item $1,151
+														378 item 97%
+														379 item SDAC
+														380 item Modelled average
+													381 row
+														382 item Blythe - City Of
+															383 button Blythe - City Of
+														384 item Riverside
+														385 item Failing
+														386 item 9,735
+														387 item $6.1M
+														388 item $625
+														389 item 100%
+														390 item SDAC
+														391 item Modelled average
+													392 row
+														393 item City Of Orange Cove
+															394 button City Of Orange Cove
+														395 item Fresno
+														396 item At-Risk
+														397 item 9,525
+														398 item $6.3M
+														399 item $664
+														400 item 89%
+														401 item SDAC
+														402 item Modelled average
+													403 row
+														404 item Tract 349 Mutual Water Co.
+															405 button Tract 349 Mutual Water Co.
+														406 item Los Angeles
+														407 item Failing
+														408 item 8,700
+														409 item $9.8M
+														410 item $1,122
+														411 item 95%
+														412 item SDAC
+														413 item Modelled average
+													414 row
+														415 item Hughson, City Of
+															416 button Hughson, City Of
+														417 item Stanislaus
+														418 item Failing
+														419 item 7,977
+														420 item $9.3M
+														421 item $1,170
+														422 item 92%
+														423 item Non-DAC
+														424 item Modelled average
+													425 row
+														426 item Earlimart Pud
+															427 button Earlimart Pud
+														428 item Tulare
+														429 item Failing
+														430 item 7,679
+														431 item $6.1M
+														432 item $796
+														433 item 100%
+														434 item SDAC
+														435 item Modelled average
+													436 row
+														437 item City Of Dos Palos
+															438 button City Of Dos Palos
+														439 item Merced
+														440 item Failing
+														441 item 7,452
+														442 item $10M
+														443 item $1,346
+														444 item 94%
+														445 item SDAC
+														446 item Modelled average
+													447 row
+														448 item Huron, City Of
+															449 button Huron, City Of
+														450 item Fresno
+														451 item Failing
+														452 item 7,306
+														453 item $10M
+														454 item $1,373
+														455 item 93%
+														456 item SDAC
+														457 item Modelled average
+													458 row
+														459 item City Of Colusa
+															460 button City Of Colusa
+														461 item Colusa
+														462 item Failing
+														463 item 6,675
+														464 item $9.1M
+														465 item $1,360
+														466 item 97%
+														467 item SDAC
+														468 item Modelled average
+													469 row
+														470 item Cutler Pud
+															471 button Cutler Pud
+														472 item Tulare
+														473 item Failing
+														474 item 6,200
+														475 item $4.9M
+														476 item $788
+														477 item 100%
+														478 item SDAC
+														479 item Modelled average
+													480 row
+														481 item Hilmar County Water District
+															482 button Hilmar County Water District
+														483 item Merced
+														484 item Failing
+														485 item 5,504
+														486 item $6.7M
+														487 item $1,214
+														488 item 96%
+														489 item SDAC
+														490 item Modelled average
+													491 row
+														492 item St. Helena, City Of
+															493 button St. Helena, City Of
+														494 item Napa
+														495 item Failing
+														496 item 5,386
+														497 item $10M
+														498 item $1,873
+														499 item 87%
+														500 item Non-DAC
+														501 item Modelled average
+													502 row
+														503 item Yosemite Spring Park Util Co
+															504 button Yosemite Spring Park Util Co
+														505 item Madera
+														506 item Failing
+														507 item 5,300
+														508 item $7.8M
+														509 item $1,462
+														510 item 89%
+														511 item Non-DAC
+														512 item Modelled average
+													513 row
+														514 item Correctional Training Facility - Soledad
+															515 button Correctional Training Facility - Soledad
+														516 item Monterey
+														517 item Failing
+														518 item 4,357
+														519 item $11M
+														520 item $2,517
+														521 item 82%
+														522 item Miss/Indet
+														523 item Modelled average
+													524 row
+														525 item Sheep Creek Water Company
+															526 button Sheep Creek Water Company
+														527 item San Bernardino
+														528 item Failing
+														529 item 4,002
+														530 item $4.9M
+														531 item $1,221
+														532 item 95%
+														533 item SDAC
+														534 item Modelled average
+													535 row
+														536 item Weaverville C.S.D.
+															537 button Weaverville C.S.D.
+														538 item Trinity
+														539 item Failing
+														540 item 3,975
+														541 item $6.1M
+														542 item $1,530
+														543 item 92%
+														544 item SDAC
+														545 item Modelled average
+													546 row
+														547 item Madera Co Md10A-Madera Ranchos
+															548 button Madera Co Md10A-Madera Ranchos
+														549 item Madera
+														550 item Failing
+														551 item 3,072
+														552 item $9.7M
+														553 item $3,155
+														554 item 65%
+														555 item Non-DAC
+														556 item Modelled average
+													557 row
+														558 item Cal Am - Bass Lake
+															559 button Cal Am - Bass Lake
+														560 item Madera
+														561 item Failing
+														562 item 3,066
+														563 item $9.5M
+														564 item $3,098
+														565 item 67%
+														566 item Non-DAC
+														567 item Modelled average
+													568 row
+														569 item Green Valley Mwc
+															570 button Green Valley Mwc
+														571 item San Bernardino
+														572 item Failing
+														573 item 2,993
+														574 item $4.2M
+														575 item $1,416
+														576 item 91%
+														577 item Non-DAC
+														578 item Modelled average
+													579 row
+														580 item Palo Alto Park Mutual Water Company
+															581 button Palo Alto Park Mutual Water Company
+														582 item San Mateo
+														583 item Failing
+														584 item 2,900
+														585 item $7.1M
+														586 item $2,440
+														587 item 73%
+														588 item Non-DAC
+														589 item Modelled average
+													590 row
+														591 item Land Projects Mutual Water Co.
+															592 button Land Projects Mutual Water Co.
+														593 item Los Angeles
+														594 item Failing
+														595 item 2,800
+														596 item $5.6M
+														597 item $2,001
+														598 item 83%
+														599 item Non-DAC
+														600 item Modelled average
+													601 row
+														602 item Pixley Public Util Dist
+															603 button Pixley Public Util Dist
+														604 item Tulare
+														605 item Failing
+														606 item 2,772
+														607 item $9.1M
+														608 item $3,279
+														609 item 69%
+														610 item SDAC
+														611 item Modelled average
+													612 row
+														613 item Riverdale Public Utility District
+															614 button Riverdale Public Utility District
+														615 item Fresno
+														616 item Failing
+														617 item 2,756
+														618 item $9.3M
+														619 item $3,372
+														620 item 71%
+														621 item SDAC
+														622 item Modelled average
+													623 row
+														624 item Pine Valley Mutual Wc
+															625 button Pine Valley Mutual Wc
+														626 item San Diego
+														627 item Failing
+														628 item 2,574
+														629 item $7.4M
+														630 item $2,864
+														631 item 65%
+														632 item Non-DAC
+														633 item Modelled average
+													634 row
+														635 item Tipton Community Services Dist
+															636 button Tipton Community Services Dist
+														637 item Tulare
+														638 item Failing
+														639 item 2,543
+														640 item $6.2M
+														641 item $2,433
+														642 item 86%
+														643 item SDAC
+														644 item Modelled average
+													645 row
+														646 item Terrace Water Company
+															647 button Terrace Water Company
+														648 item San Bernardino
+														649 item Failing
+														650 item 2,400
+														651 item $6.2M
+														652 item $2,590
+														653 item 82%
+														654 item DAC
+														655 item Modelled average
+													656 row
+														657 item Clearlake Oaks County Water District
+															658 button Clearlake Oaks County Water District
+														659 item Lake
+														660 item Failing
+														661 item 2,359
+														662 item $8.3M
+														663 item $3,515
+														664 item 71%
+														665 item SDAC
+														666 item Modelled average
+													667 row
+														668 item Little Bear Water Company
+															669 button Little Bear Water Company
+														670 item Monterey
+														671 item Failing
+														672 item 2,327
+														673 item $7.2M
+														674 item $3,089
+														675 item 66%
+														676 item Non-DAC
+														677 item Modelled average
+													678 row
+														679 item Westmorland, City Of
+															680 button Westmorland, City Of
+														681 item Imperial
+														682 item Failing
+														683 item 2,202
+														684 item $6.2M
+														685 item $2,823
+														686 item 83%
+														687 item SDAC
+														688 item Modelled average
+													689 row
+														690 item Nacimiento Water Company
+															691 button Nacimiento Water Company
+														692 item San Luis Obispo
+														693 item Failing
+														694 item 2,191
+														695 item $6.8M
+														696 item $3,099
+														697 item 64%
+														698 item SDAC
+														699 item Modelled average
+													700 row
+														701 item Bolinas Community Pud
+															702 button Bolinas Community Pud
+														703 item Marin
+														704 item At-Risk
+														705 item 1,937
+														706 item $3.0M
+														707 item $1,528
+														708 item 80%
+														709 item Non-DAC
+														710 item Modelled average
+													711 row
+														712 item 10/30/2026
+															713 button 10/30/2026
+														714 item Ventura
+														715 item Failing
+														716 item 1,820
+														717 item $7.3M
+														718 item $4,002
+														719 item 61%
+														720 item DAC
+														721 item Modelled average
+													722 row
+														723 item London Community Serv Dist
+															724 button London Community Serv Dist
+														725 item Tulare
+														726 item Failing
+														727 item 1,800
+														728 item $9.0M
+														729 item $4,998
+														730 item 48%
+														731 item SDAC
+														732 item Modelled average
+													733 row
+														734 item Woodville Public Utility Dist
+															735 button Woodville Public Utility Dist
+														736 item Tulare
+														737 item At-Risk
+														738 item 1,740
+														739 item $7.9M
+														740 item $4,530
+														741 item 60%
+														742 item SDAC
+														743 item Modelled average
+													744 row
+														745 item Lake Don Pedro Csd
+															746 button Lake Don Pedro Csd
+														747 item Tuolumne
+														748 item Failing
+														749 item 1,700
+														750 item $6.1M
+														751 item $3,597
+														752 item 64%
+														753 item DAC
+														754 item Modelled average
+													755 row
+														756 item Richgrove Community Services District
+															757 button Richgrove Community Services District
+														758 item Tulare
+														759 item Failing
+														760 item 1,617
+														761 item $5.4M
+														762 item $3,313
+														763 item 74%
+														764 item SDAC
+														765 item Modelled average
+													766 row
+														767 item Del Rey Community Serv Dist
+															768 button Del Rey Community Serv Dist
+														769 item Fresno
+														770 item Failing
+														771 item 1,491
+														772 item $6.8M
+														773 item $4,536
+														774 item 56%
+														775 item SDAC
+														776 item Modelled average
+													777 row
+														778 item High Desert Detention Center
+															779 button High Desert Detention Center
+														780 item San Bernardino
+														781 item At-Risk
+														782 item 1,400
+														783 item $0.2M
+														784 item $123
+														785 item 47%
+														786 item Miss/Indet
+														787 item Modelled average
+													788 row
+														789 item Lebec County Water District
+															790 button Lebec County Water District
+														791 item Kern
+														792 item Failing
+														793 item 1,379
+														794 item $6.4M
+														795 item $4,669
+														796 item 52%
+														797 item SDAC
+														798 item Modelled average
+													799 row
+														800 item Rio Bravo Greeley School Water System
+															801 button Rio Bravo Greeley School Water System
+														802 item Kern
+														803 item Failing
+														804 item 1,219
+														805 item $1.8M
+														806 item $1,487
+														807 item 95%
+														808 item Miss/Indet
+														809 item Modelled average
+													810 row
+														811 item Mcswain Elementary School
+															812 button Mcswain Elementary School
+														813 item Merced
+														814 item Failing
+														815 item 1,025
+														816 item $2.3M
+														817 item $2,234
+														818 item 79%
+														819 item Miss/Indet
+														820 item Modelled average
+													821 row
+														822 item Easton Authority Jpa
+															823 button Easton Authority Jpa
+														824 item Fresno
+														825 item Failing
+														826 item 1,000
+														827 item $2.2M
+														828 item $2,194
+														829 item 81%
+														830 item Miss/Indet
+														831 item Modelled average
+													832 row
+														833 item Baker Community Services District
+															834 button Baker Community Services District
+														835 item San Bernardino
+														836 item Failing
+														837 item 1,000
+														838 item $2.4M
+														839 item $2,363
+														840 item 83%
+														841 item SDAC
+														842 item Modelled average
+													843 row
+														844 item Rosamond School Water System
+															845 button Rosamond School Water System
+														846 item Kern
+														847 item Failing
+														848 item 940
+														849 item $0.2M
+														850 item $203
+														851 item 100%
+														852 item Miss/Indet
+														853 item Modelled average
+													854 row
+														855 item Sundale Union School
+															856 button Sundale Union School
+														857 item Tulare
+														858 item Failing
+														859 item 930
+														860 item $1.0M
+														861 item $1,128
+														862 item 93%
+														863 item Miss/Indet
+														864 item Modelled average
+													865 row
+														866 item Lakeside School
+															867 button Lakeside School
+														868 item Kern
+														869 item Failing
+														870 item 897
+														871 item $0.4M
+														872 item $425
+														873 item 100%
+														874 item Miss/Indet
+														875 item Modelled average
+													876 row
+														877 item Madison Service Dist
+															878 button Madison Service Dist
+														879 item Yolo
+														880 item Failing
+														881 item 876
+														882 item $3.2M
+														883 item $3,687
+														884 item 61%
+														885 item SDAC
+														886 item Modelled average
+													887 row
+														888 item Liberty Elementary School
+															889 button Liberty Elementary School
+														890 item Tulare
+														891 item At-Risk
+														892 item 818
+														893 item $0.9M
+														894 item $1,052
+														895 item 77%
+														896 item Miss/Indet
+														897 item Modelled average
+													898 row
+														899 item Eastside Union School District
+															900 button Eastside Union School District
+														901 item Los Angeles
+														902 item At-Risk
+														903 item 650
+														904 item $0.2M
+														905 item $265
+														906 item 96%
+														907 item Miss/Indet
+														908 item Modelled average
+													909 row
+														910 item Musd-New Haven School
+															911 button Musd-New Haven School
+														912 item San Joaquin
+														913 item Failing
+														914 item 626
+														915 item $0.7M
+														916 item $1,067
+														917 item 96%
+														918 item Miss/Indet
+														919 item Modelled average
+													920 row
+														921 item Csa 62
+															922 button Csa 62
+														923 item Riverside
+														924 item Failing
+														925 item 614
+														926 item $2.6M
+														927 item $4,272
+														928 item 65%
+														929 item SDAC
+														930 item Modelled average
+													931 row
+														932 item Excelsior Middle School
+															933 button Excelsior Middle School
+														934 item Contra Costa
+														935 item Failing
+														936 item 600
+														937 item $0.2M
+														938 item $318
+														939 item 100%
+														940 item Miss/Indet
+														941 item Modelled average
+													942 row
+														943 item Bonita School
+															944 button Bonita School
+														945 item Santa Barbara
+														946 item Failing
+														947 item 589
+														948 item $0.1M
+														949 item $162
+														950 item 100%
+														951 item Miss/Indet
+														952 item Modelled average
+													953 row
+														954 item Echo Valley School Ws
+															955 button Echo Valley School Ws
+														956 item Monterey
+														957 item Failing
+														958 item 579
+														959 item $0.1M
+														960 item $165
+														961 item 100%
+														962 item Miss/Indet
+														963 item Modelled average
+													964 row
+														965 item Meadows Union Elementary School
+															966 button Meadows Union Elementary School
+														967 item Imperial
+														968 item Failing
+														969 item 550
+														970 item $0.1M
+														971 item $173
+														972 item 100%
+														973 item Miss/Indet
+														974 item Modelled average
+													975 row
+														976 item Riverview School
+															977 button Riverview School
+														978 item Fresno
+														979 item Failing
+														980 item 536
+														981 item $0.1M
+														982 item $178
+														983 item 100%
+														984 item Miss/Indet
+														985 item Modelled average
+													986 row
+														987 item Frazier Mountain High School
+															988 button Frazier Mountain High School
+														989 item Kern
+														990 item Failing
+														991 item 516
+														992 item $0.1M
+														993 item $185
+														994 item 100%
+														995 item Miss/Indet
+														996 item Modelled average
+													997 row
+														998 item Ceres Unified/Westport School
+															999 button Ceres Unified/Westport School
+														1000 item Stanislaus
+														1001 item Failing
+														1002 item 450
+														1003 item $0.6M
+														1004 item $1,272
+														1005 item 94%
+														1006 item Miss/Indet
+														1007 item Modelled average
+													1008 row
+														1009 item Alta Elementary School
+															1010 button Alta Elementary School
+														1011 item Fresno
+														1012 item Failing
+														1013 item 395
+														1014 item $0.1M
+														1015 item $242
+														1016 item 100%
+														1017 item Miss/Indet
+														1018 item Modelled average
+													1019 row
+														1020 item Stanislaus Union School Dist
+															1021 button Stanislaus Union School Dist
+														1022 item Stanislaus
+														1023 item Failing
+														1024 item 390
+														1025 item $0.1M
+														1026 item $245
+														1027 item 100%
+														1028 item Miss/Indet
+														1029 item Modelled average
+													1030 row
+														1031 item Laguna Vista School/Oceanview School Dis
+															1032 button Laguna Vista School/Oceanview School Dis
+														1033 item Ventura
+														1034 item At-Risk
+														1035 item 377
+														1036 item $0.2M
+														1037 item $457
+														1038 item 94%
+														1039 item Miss/Indet
+														1040 item Modelled average
+													1041 row
+														1042 item Knightsen Elementary School
+															1043 button Knightsen Elementary School
+														1044 item Contra Costa
+														1045 item At-Risk
+														1046 item 350
+														1047 item $0.7M
+														1048 item $1,967
+														1049 item 49%
+														1050 item Miss/Indet
+														1051 item Modelled average
+													1052 row
+														1053 item Campo Elementary School
+															1054 button Campo Elementary School
+														1055 item San Diego
+														1056 item Failing
+														1057 item 300
+														1058 item $0.3M
+														1059 item $954
+														1060 item 97%
+														1061 item Miss/Indet
+														1062 item Modelled average
+													1063 row
+														1064 item Lake Madrone Water District
+															1065 button Lake Madrone Water District
+														1066 item Butte
+														1067 item Failing
+														1068 item 297
+														1069 item $0.5M
+														1070 item $1,606
+														1071 item 89%
+														1072 item DAC
+														1073 item Modelled average
+													1074 row
+														1075 item Manzanita Elementary School
+															1076 button Manzanita Elementary School
+														1077 item Butte
+														1078 item Failing
+														1079 item 295
+														1080 item $0.3M
+														1081 item $970
+														1082 item 95%
+														1083 item Miss/Indet
+														1084 item Modelled average
+													1085 row
+														1086 item Schelby School
+															1087 button Schelby School
+														1088 item Merced
+														1089 item Failing
+														1090 item 290
+														1091 item $0.9M
+														1092 item $2,961
+														1093 item 66%
+														1094 item Miss/Indet
+														1095 item Modelled average
+													1096 row
+														1097 item Di Giorgio School Water System
+															1098 button Di Giorgio School Water System
+														1099 item Kern
+														1100 item Failing
+														1101 item 268
+														1102 item $0.1M
+														1103 item $356
+														1104 item 100%
+														1105 item Miss/Indet
+														1106 item Modelled average
+													1107 row
+														1108 item Hope Elementary School District
+															1109 button Hope Elementary School District
+														1110 item Tulare
+														1111 item Failing
+														1112 item 264
+														1113 item $0.7M
+														1114 item $2,530
+														1115 item 80%
+														1116 item Miss/Indet
+														1117 item Modelled average
+													1118 row
+														1119 item Houghton-Kearney School
+															1120 button Houghton-Kearney School
+														1121 item Fresno
+														1122 item Failing
+														1123 item 252
+														1124 item $0.4M
+														1125 item $1,514
+														1126 item 91%
+														1127 item Miss/Indet
+														1128 item Modelled average
+													1129 row
+														1130 item American Union School
+															1131 button American Union School
+														1132 item Fresno
+														1133 item Failing
+														1134 item 250
+														1135 item $0.1M
+														1136 item $382
+														1137 item 100%
+														1138 item Miss/Indet
+														1139 item Modelled average
+													1140 row
+														1141 item Waukena Elementary School
+															1142 button Waukena Elementary School
+														1143 item Tulare
+														1144 item Failing
+														1145 item 220
+														1146 item $0.7M
+														1147 item $3,035
+														1148 item 67%
+														1149 item Miss/Indet
+														1150 item Modelled average
+													1151 row
+														1152 item Pleasant View West School
+															1153 button Pleasant View West School
+														1154 item Tulare
+														1155 item Failing
+														1156 item 220
+														1157 item $0.9M
+														1158 item $3,903
+														1159 item 60%
+														1160 item Miss/Indet
+														1161 item Modelled average
+													1162 row
+														1163 item Manning Gardens Care Center Inc
+															1164 button Manning Gardens Care Center Inc
+														1165 item Fresno
+														1166 item At-Risk
+														1167 item 170
+														1168 item $0.2M
+														1169 item $1,013
+														1170 item 57%
+														1171 item Miss/Indet
+														1172 item Modelled average
+													1173 row
+														1174 item Mountain View Elementary School
+															1175 button Mountain View Elementary School
+														1176 item Stanislaus
+														1177 item Failing
+														1178 item 170
+														1179 item $0.1M
+														1180 item $561
+														1181 item 100%
+														1182 item Miss/Indet
+														1183 item Modelled average
+													1184 row
+														1185 item Sierra View Jr Academy
+															1186 button Sierra View Jr Academy
+														1187 item Tulare
+														1188 item Failing
+														1189 item 121
+														1190 item $0.5M
+														1191 item $3,942
+														1192 item 39%
+														1193 item Miss/Indet
+														1194 item Modelled average
+													1195 row
+														1196 item Kings Canyon High School
+															1197 button Kings Canyon High School
+														1198 item Fresno
+														1199 item Failing
+														1200 item 107
+														1201 item $0.1M
+														1202 item $892
+														1203 item 94%
+														1204 item Miss/Indet
+														1205 item Modelled average
+													1206 row
+														1207 item Packwood School
+															1208 button Packwood School
+														1209 item Tulare
+														1210 item Failing
+														1211 item 105
+														1212 item $0.2M
+														1213 item $1,817
+														1214 item 68%
+														1215 item Miss/Indet
+														1216 item Modelled average
+													1217 row
+														1218 item Spring Valley School
+															1219 button Spring Valley School
+														1220 item Butte
+														1221 item Failing
+														1222 item 100
+														1223 item $0.1M
+														1224 item $954
+														1225 item 95%
+														1226 item Miss/Indet
+														1227 item Modelled average
+													1228 row
+														1229 item Napa County Schools: Pope Valley
+															1230 button Napa County Schools: Pope Valley
+														1231 item Napa
+														1232 item Failing
+														1233 item 100
+														1234 item $0.1M
+														1235 item $954
+														1236 item 92%
+														1237 item Miss/Indet
+														1238 item Modelled average
+													1239 row
+														1240 item Willow Creek School
+															1241 button Willow Creek School
+														1242 item Siskiyou
+														1243 item At-Risk
+														1244 item 100
+														1245 item $0.2M
+														1246 item $1,721
+														1247 item 51%
+														1248 item Miss/Indet
+														1249 item Modelled average
+													1250 row
+														1251 item Junction City School
+															1252 button Junction City School
+														1253 item Trinity
+														1254 item Failing
+														1255 item 80
+														1256 item $0.1M
+														1257 item $1,192
+														1258 item 81%
+														1259 item Miss/Indet
+														1260 item Modelled average
+									143 footer
+										144 text Data: California State Water Resources Control Board (SAFER Risk Assessment 2024 to 2026, Affordability Assessment, 2024 Cost Assessment, service-area boundaries). Costs are modelled estimates, not quotes.
+										145 link Source Value: https://github.com/palashraks-afk/XylemProject
+								41 region
+							42 region
+						43 region
+							44 region
+								45 button Tab search
+							46 region ID: view_21
+								47 tab
+									48 tab item (selectable) Xylem: California Water Funding Optimizer ID: view_20
+										49 button Close
+								50 region
+							51 button New Tab
+							52 region
+							53 region
+								54 button Open Gemini in Chrome
+								55 region
+						56 region
+
+Selected text: ```
+127.0.0.1:8891
+```
+
+Note: Pay special attention to the content selected by the user. If the user asks a question or refers to the content they are looking at on-screen, they might be referring to the selected content (but they might be referring to something else that's visible, too).

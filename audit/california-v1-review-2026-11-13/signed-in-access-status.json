@@ -1,0 +1,17 @@
+{
+  "approved_commit": "2ce2832ffc2be043da6dc194c025d6abdbaf13a1",
+  "main_rechecked": "2ce2832ffc2be043da6dc194c025d6abdbaf13a1",
+  "publication_approval": "RECEIVED; unchanged approved action needs no repeat approval",
+  "browser_signed_in": true,
+  "browser_login_observed": "Spondasas",
+  "connected_github_login": "Spondasas",
+  "connected_permissions": {"admin": false, "maintain": false, "push": true},
+  "has_pages": false,
+  "browser_pages_check": "Navigated directly to https://github.com/palashraks-afk/XylemProject/settings/pages after sign-in; signed-in GitHub navigation remained present and page returned 404",
+  "collaborator_role_endpoint": "Unavailable to integration (403); no stronger role claim inferred from this endpoint",
+  "blocker": "Signed-in account cannot access repository Pages settings; connected repository metadata reports no admin/maintainer access",
+  "required_owner_action": "Repository owner palashraks-afk or an existing admin/maintainer must select GitHub Actions in repository Settings > Pages",
+  "settings_changes": "NONE",
+  "workflow_dispatch": "NOT PERFORMED",
+  "hosted_bytes_browser_smoke_physical_phone_spoken_AT_actual_download": "UNVERIFIED"
+}

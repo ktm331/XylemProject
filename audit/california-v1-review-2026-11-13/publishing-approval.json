@@ -1,0 +1,14 @@
+{
+  "recorded_at_utc": "2026-11-13T06:11:04.833Z",
+  "user_statement": "I approve enabling public Pages and deploying commit `2ce2832`.",
+  "repository": "palashraks-afk/XylemProject",
+  "approved_commit": "2ce2832ffc2be043da6dc194c025d6abdbaf13a1",
+  "approved_actions": [
+    "Enable public Pages with GitHub Actions as source",
+    "Manually dispatch existing Pages workflow for reviewed commit"
+  ],
+  "intended_site": "https://palashraks-afk.github.io/XylemProject/",
+  "workflow_trigger": "workflow_dispatch only; preserve",
+  "scope": "This reviewed commit only; no new pushes, PRs, model/data edits, other deployments or outreach authorized",
+  "execution": "NOT YET PERFORMED"
+}

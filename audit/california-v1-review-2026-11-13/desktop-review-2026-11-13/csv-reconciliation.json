@@ -1,0 +1,27 @@
+{
+  "recorded_at_utc": "2026-11-14T03:43:43.514656+00:00",
+  "result": "PASS",
+  "scope": "Actual desktop CSV download; independent frozen Python optimizer",
+  "csv": "C:\\Users\\sai71\\.codex\\visualizations\\2026\\11\\13\\01a1d377-9c26-7a73-b228-eb550dde3ef9\\california-v1-release\\desktop-review-2026-11-13\\fixed-share-500M.csv",
+  "sha256": "066cc95b176f228ae3892581f27f493cefbf204e2798382b6dfecc219cd95e6b",
+  "systems": 54,
+  "people": 966559,
+  "cost_usd": 493070597.0,
+  "budget_usd": 500000000.0,
+  "scenario": {
+    "b": 500.0,
+    "l": 1.0,
+    "h": 5.0,
+    "v": "fixed",
+    "a": 0.5,
+    "r": 0.0,
+    "c": 0.0,
+    "m": 1.0
+  },
+  "ui_build": "efb5e6e0e986178bef4bb6c9d3810854623d0c8947d3ecb631c80accda6c7a1b",
+  "snapshot_id": "806032f64da14561b81c55e72179ec22f299774fa97b9b5f08c4742909f9c0bd",
+  "membership_costs_population_weights_stability_metadata": "PASS",
+  "visible_plan_match": "PASS",
+  "system_detail_CA1910092_in_export": "PASS",
+  "physical_phone_download": "UNVERIFIED"
+}

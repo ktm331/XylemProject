@@ -1,0 +1,180 @@
+{
+  "status": "PASS",
+  "candidate_commit": "2ce2832ffc2be043da6dc194c025d6abdbaf13a1",
+  "ui_build": "efb5e6e0e986178bef4bb6c9d3810854623d0c8947d3ecb631c80accda6c7a1b",
+  "snapshot_id": "806032f64da14561b81c55e72179ec22f299774fa97b9b5f08c4742909f9c0bd",
+  "tracked_files_matched": 612,
+  "app_files_verified": 24,
+  "data_files_verified": 10,
+  "vendor_files_verified": 6,
+  "zip_sha256": "3edd4ad7c698057798b700e9872baacafc548b957482092ae2d9f6f2b5eee006",
+  "zip_files_matched": 24,
+  "lossless_axe_archives_verified": 32,
+  "final_axe_scans": [
+    {
+      "file": "verified/chrome-320px-axe.json",
+      "violations": 0,
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 0
+        },
+        {
+          "id": "link-in-text-block",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "file": "verified/chrome-default-axe.json",
+      "violations": 0,
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 0
+        },
+        {
+          "id": "link-in-text-block",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "file": "verified/chrome-expanded-axe.json",
+      "violations": 0,
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 0
+        },
+        {
+          "id": "link-in-text-block",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "file": "verified/chrome-method-axe.json",
+      "violations": 0,
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 0
+        },
+        {
+          "id": "link-in-text-block",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "file": "verified/msedge-320px-axe.json",
+      "violations": 0,
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 0
+        },
+        {
+          "id": "link-in-text-block",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "file": "verified/msedge-default-axe.json",
+      "violations": 0,
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 0
+        },
+        {
+          "id": "link-in-text-block",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "file": "verified/msedge-expanded-axe.json",
+      "violations": 0,
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 0
+        },
+        {
+          "id": "link-in-text-block",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "file": "verified/msedge-method-axe.json",
+      "violations": 0,
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 0
+        },
+        {
+          "id": "link-in-text-block",
+          "nodes": 1
+        }
+      ]
+    }
+  ],
+  "nonraw_diagnostic_hashes_verified": 32,
+  "frozen_paths": "unchanged",
+  "workflow": "workflow_dispatch only; unchanged",
+  "existing_automated_results_revalidated_by_file_hash": {
+    "accessibility": {
+      "passed": 32,
+      "failed": 0
+    },
+    "release_browser": {
+      "passed": 37,
+      "failed": 0
+    },
+    "python_tests": 121,
+    "optimizer_parity_cases": 110,
+    "reconciled_csvs": 34
+  },
+  "raw_inputs": "335 previously verified; not re-extracted or downloaded this turn",
+  "human_phone_spoken_AT_actual_downloads": "UNVERIFIED",
+  "deployment_authorization": "PENDING",
+  "deployment": "NOT PERFORMED",
+  "recorded_at_utc": "2026-11-13T06:00:19.899047+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "decision_date_pacific": "2026-11-13",
+  "user_answer": "Keep the exact-byte requirement",
+  "proposed_exception": "Accept only the documented Cloudflare script addition for the private preview, while recording the strict HTML byte-check failure",
+  "exception_status": "DECLINED",
+  "strict_served_html_byte_check": "FAIL",
+  "verified_phone_testing_gate": "BLOCKED",
+  "private_publication_approval": "Remains valid; publication already succeeded",
+  "public_pages_approval": "Earlier approval for original commit 2ce2832 remains recorded; no dispatch performed",
+  "security_or_access_settings_changed": false,
+  "human_phone_spoken_AT_actual_phone_download": "UNVERIFIED"
+}

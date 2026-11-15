@@ -1,0 +1,132 @@
+{
+  "recorded_at_utc": "2026-11-14T03:29:59.296509+00:00",
+  "scope": "Local loopback preview, desktop only",
+  "status": "PASS",
+  "url": "http://127.0.0.1:8891/",
+  "ui_build": "efb5e6e0e986178bef4bb6c9d3810854623d0c8947d3ecb631c80accda6c7a1b",
+  "snapshot_id": "806032f64da14561b81c55e72179ec22f299774fa97b9b5f08c4742909f9c0bd",
+  "files": [
+    {
+      "file": "build.json",
+      "sha256": "8e1d8b1ba0839f716887be21c4ff355a905f967d18f29b264afbf56f275fc22c",
+      "status": "PASS"
+    },
+    {
+      "file": "app.js",
+      "sha256": "581927a0541e4f408cf410ba709b2e607b7f62d64c15f822fea43f2b906e84c1",
+      "status": "PASS"
+    },
+    {
+      "file": "data/boundaries.geojson",
+      "sha256": "682a80b9b1858fd416e8f8c9c50b6527dc70ab73521b1a681d175a7ec59ac212",
+      "status": "PASS"
+    },
+    {
+      "file": "data/boundary_coverage.json",
+      "sha256": "574f6d09ad30eee09f628bbc69753120ccdf623d33914416a8daba90e27f55f3",
+      "status": "PASS"
+    },
+    {
+      "file": "data/counties.geojson",
+      "sha256": "a04ee3483159d19f5d708517e3e2f1a016718d364a31e1b0460a0a4c8ed467e7",
+      "status": "PASS"
+    },
+    {
+      "file": "data/forecast.json",
+      "sha256": "ce5f62defd5ed7389b692e2dd22be25476a76c932efb618f802b5d044c3d6a13",
+      "status": "PASS"
+    },
+    {
+      "file": "data/gis.json",
+      "sha256": "d57e8d7d359154b762d61669c634965cb55c3f243cd0d2e94d44697dc189ccd3",
+      "status": "PASS"
+    },
+    {
+      "file": "data/infrastructure.json",
+      "sha256": "4f363c660f0dff13bb444c8d59f780394815570446ed8b3fdfbd05a4d7fa306d",
+      "status": "PASS"
+    },
+    {
+      "file": "data/routes.geojson",
+      "sha256": "66f02eae22ca93de8dcc4840d79f9a94915bdf53ea63ec634ad0b76752d06449",
+      "status": "PASS"
+    },
+    {
+      "file": "data/routes.json",
+      "sha256": "79b37a100bda707cb767a08fb8f770c3476b4e3717f39879e27d099c47fa9a8a",
+      "status": "PASS"
+    },
+    {
+      "file": "data/snapshot.json",
+      "sha256": "4121d2efe14c4649444c0676af3c4eb590a20b71ffbc6461b358e5c0dac4716b",
+      "status": "PASS"
+    },
+    {
+      "file": "data/summary.json",
+      "sha256": "cc8d23b9ac0e579b6264f7fbfff9a54dfd9217fee7321b15dbee0adecbc73cc1",
+      "status": "PASS"
+    },
+    {
+      "file": "data/systems.json",
+      "sha256": "e919b4c1be007506111bb93e5a282c84517ffbfef1dad9d940f430b483514562",
+      "status": "PASS"
+    },
+    {
+      "file": "index.html",
+      "sha256": "10d0d73de11d259e9dab6ebce8c60be8d2ecbe3362460bb2b92818d3057b02bd",
+      "status": "PASS"
+    },
+    {
+      "file": "map3d.js",
+      "sha256": "4d6f6542e8d2a9bd5771c68d54e5226a71a71939b963d565ebd56f12c9f74651",
+      "status": "PASS"
+    },
+    {
+      "file": "optimizer.js",
+      "sha256": "249efcc3e564b7fbdc45180a6b69014c5dcf6260016e09e6259eb2ed7a7ae998",
+      "status": "PASS"
+    },
+    {
+      "file": "style.css",
+      "sha256": "8613c050e1c306291b57151f7020061cfe114980e19eaffda21337bf016b805f",
+      "status": "PASS"
+    },
+    {
+      "file": "vendor/LEAFLET-LICENSE",
+      "sha256": "53e8dc25862014e4324741ca18fbe3611e11d42ef69f59f86ea8c5389647d4cb",
+      "status": "PASS"
+    },
+    {
+      "file": "vendor/leaflet.css",
+      "sha256": "b570abbda963c60b4de4b4ff4b26f9326f53fb2ccf1461fdf0955ca094fb2539",
+      "status": "PASS"
+    },
+    {
+      "file": "vendor/leaflet.js",
+      "sha256": "5c9aecfc30e4564519dbdcddcc53a418227dcc7568e619e9762ddcec7609ed47",
+      "status": "PASS"
+    },
+    {
+      "file": "vendor/manifest.json",
+      "sha256": "ca2b4fc6b861f82ab18d43fcf348fed50ca422936553553c73f3671a9cfb2586",
+      "status": "PASS"
+    },
+    {
+      "file": "vendor/maplibre-gl.css",
+      "sha256": "792ac997dcf6ae6f643eb4e2dee4630c85e7056526bd8fb85ffe83c67d6c41b4",
+      "status": "PASS"
+    },
+    {
+      "file": "vendor/maplibre-gl.js",
+      "sha256": "07e6ca71a5b6d835a7c3803fb484f0a6e5f0dcbfa131407666edb9e9316564f9",
+      "status": "PASS"
+    },
+    {
+      "file": "vendor/MAPLIBRE-LICENSE.txt",
+      "sha256": "ee5fc05a0677eaf69601d2c7db0d9ecd6cc27c3abc1d0733bc9ed34707cf8ef2",
+      "status": "PASS"
+    }
+  ],
+  "external_upload_or_publication": "NONE",
+  "physical_phone_and_spoken_AT_actual_device_download": "UNVERIFIED"
+}

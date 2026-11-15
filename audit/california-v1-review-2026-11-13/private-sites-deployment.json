@@ -1,0 +1,25 @@
+{
+  "id": "appgdep_6af7e0d467dc81919a6c6274c31a2e94",
+  "project_id": "appgprj_6af7df45649c81918b43785b33a7c926",
+  "title": "Xylem California v1 — Private Device Review",
+  "version_id": "appgprj_6af7df45649c81918b43785b33a7c926~appgver_8b04f1f526a4819191696c2d8d1c5754",
+  "type": "publish",
+  "status": "succeeded",
+  "url": "https://xylem-california-v1-efb5e6e0e986.srpatlola2020.chatgpt.site",
+  "has_mcp": false,
+  "screenshot_asset_pointer": null,
+  "provider_deployment_id": "release---6af7e0d467dc81919a6c6274c31a2e94",
+  "failure_message": null,
+  "env_set_revision": 0,
+  "updated_at": "2026-11-14T04:17:32.072368+00:00",
+  "source_commit": "6f0cd6f96abcc6d8e10605641e4db24666b57912",
+  "original_commit": "2ce2832ffc2be043da6dc194c025d6abdbaf13a1",
+  "audience": "owner-private",
+  "access_confirmation": {
+    "current_user_role": "owner",
+    "access_mode": "custom",
+    "allowed_user_count": 1,
+    "allowed_group_count": 0
+  },
+  "token_recorded": false
+}

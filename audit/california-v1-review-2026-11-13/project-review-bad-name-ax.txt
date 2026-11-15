@@ -1,0 +1,25 @@
+Browser tab: 2, Title: "Xylem: California Water Funding Optimizer", URL: "https://xylem-california-v1-efb5e6e0e986.srpatlola2020.chatgpt.site/#b=500&l=1&h=5&v=fc&a=0.5&r=0&c=0&m=1".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
++		2033 container 10/30/2026, ID: detail
++			2034 text CA5610029 · VENTURA COUNTY
++			2035 heading 10/30/2026, Value: 3, ID: detailTitle
++				2036 text 10/30/2026
++			2037 button Description: Close, ID: detailX
++			2038 text Failing · 1,820 people served · 336 connections · DAC
++			2039 text In this plan
++			2040 text Selected
++			2041 text Estimated cost
++			2042 text $7.3M
++			2043 text Illustrative cost range
++			2044 text $3.6M–$15M
++			2045 text Weighted priority score
++			2046 text 3,085
++			2047 text Selected when costs vary
++			2048 text 61% of stress tests
++			2049 container
++				2050 text Consolidate into Oxnard Water Dept
++			2051 container
++				2052 text Route 0.4 mi · $7.6M ($22,706/conn)
++			2053 text Meets the state's funding viability test
++			2054 text Issue: NITRATE
+The focused UI element is 2035 heading 10/30/2026, Value: 3, ID: detailTitle

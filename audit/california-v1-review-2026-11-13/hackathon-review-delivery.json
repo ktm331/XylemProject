@@ -1,0 +1,14 @@
+{
+  "review_date_pacific": "2026-11-13",
+  "primary_output": "HACKATHON_ASSESSMENT.md",
+  "native_page_creation": "UNAVAILABLE in callable tool inventory",
+  "html_attempt": "FAIL before usable preview: Invalid prebuilt source path assets\\visualize-data\\assets\\cdn.json",
+  "html_source_retained": "hackathon-review",
+  "protected_runtime_modified": false,
+  "fallback": "Readable Markdown assessment with all findings and ordered remaining work",
+  "app_model_data_modified": false,
+  "new_checks": ["GitHub main exact SHA", "all 1062 frozen app records profiled", "date-shaped name reproduced in live hosted detail", "official event rules, criteria, deadline and state system identity consulted"],
+  "reused_checks": "Earlier Python, parity, accessibility and desktop/CSV passing evidence; not all rerun",
+  "review_limits": ["No probabilistic win estimate or comparison against current competitors", "Full authenticated challenge card unavailable", "Physical phone and spoken-AT behavior unverified", "No new model training", "No public release or event submission"],
+  "official_main": "2ce2832ffc2be043da6dc194c025d6abdbaf13a1"
+}
