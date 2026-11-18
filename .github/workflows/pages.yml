@@ -25,6 +25,8 @@ jobs:
           node --check app/system-labels.js
           node --test tests/system-labels.test.cjs
           node tests/snapshot_parity.js
+          node --check app/funding-review.js
+          node --test tests/funding-review.test.cjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

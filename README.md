@@ -10,6 +10,14 @@ The November 17 technical pass corrects one display-only system identity, preser
 
 Start with [SETUP.md](SETUP.md) for the verified static preview and independent environment procedure, [release review](audit/RELEASE_REVIEW.md) for QA evidence and blockers, and [demonstration](audit/DEMO_REVIEW.md) for the walkthrough and practitioner checklist. The user subsequently authorized committing and pushing this reviewed candidate; see [push handoff](audit/PUSH_HANDOFF.md). Deployment remains manual; current status and the administration blocker are recorded above.
 
+## Funding review
+
+Open **Review project funding evidence** in the allocation planner to compare a public-record screening scenario with the original allocation and a benefit-per-dollar ranking. The demo includes 12 linked records and a downloadable audit CSV. See the [workflow and benchmark](audit/funding-review/README.md).
+
+## Three-system funding case study
+
+A public-record case study follows East Orosi, Daggett and San Ardo through a $500M allocation scenario and a reproducible check of existing construction funding. See [the case study](audit/three-system-case-study/Xylem_Three_System_Case_Study.md).
+
 ## Local preview and reproduction
 
 The local app data is refreshed under `historical-event-time-v2`. The old app bytes are preserved in `audit/app-before/`; [allocation comparison](audit/allocation-comparison/README.md) retains 55 old/new plans, complete selected-ID sets, membership changes, costs and scenario stability. [Refresh report](audit/APP_REFRESH_REPORT.md) records hashes, environment, checks and the local preview.

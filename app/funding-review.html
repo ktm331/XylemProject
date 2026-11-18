@@ -1,0 +1,86 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Funding review | Xylem</title>
+<meta name="description" content="Review the project scopes behind a modeled California drinking-water funding shortlist.">
+<link rel="stylesheet" href="funding-review.css">
+<script defer src="optimizer.js"></script>
+<script defer src="system-labels.js"></script>
+<script defer src="funding-review-model.js"></script>
+<script defer src="funding-review.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to funding review</a>
+<header class="masthead"><div class="wrap">
+  <a class="brand" href="index.html">Xylem</a>
+  <a class="back" href="index.html">Back to allocation planner</a>
+</div></header>
+<main class="wrap" id="main">
+  <div class="intro">
+    <h1>Funding review</h1>
+    <p>Check what a proposed water-system allocation would pay for. Review the evidence, track an existing construction scope separately, and see how the modeled shortlist changes.</p>
+  </div>
+  <p id="load-status" role="status">Loading the California snapshot and project records…</p>
+  <div id="review" hidden>
+    <section class="panel" aria-labelledby="scenario-title">
+      <h2 id="scenario-title">Model a new-award shortlist</h2>
+      <div class="controls">
+        <label>Budget <select id="budget"><option value="100">$100M</option><option value="250">$250M</option><option value="500" selected>$500M</option><option value="1000">$1B</option><option value="2000">$2B</option></select></label>
+        <label>Small-system priority <select id="reserve"><option value="0">0%</option><option value="0.15">15%</option><option value="0.3" selected>30%</option><option value="0.45">45%</option><option value="0.6">60%</option></select></label>
+      </div>
+      <p class="subtle">Uses equity weight 1, the exploratory five-year At-Risk weight and modeled costs with route adjustments off. Systems with up to 500 connections count as small.</p>
+      <div class="actions">
+        <button class="primary" type="button" id="east">Track East Orosi only</button>
+        <button type="button" id="all">Track sample construction scopes</button>
+        <button type="button" id="reset">Clear tracking</button>
+      </div>
+      <p class="subtle">Tracking sets aside a system row only in this hypothetical new-award scenario. Check whether an actual proposal covers the same scope. Interim, planning, and unverified records stay eligible for modeled review.</p>
+    </section>
+
+    <section class="panel" aria-labelledby="result-title">
+      <h2 id="result-title">How the shortlist changes</h2>
+      <p class="result" id="result-status" role="status" aria-atomic="true"></p>
+      <div class="table-scroll" role="region" aria-label="Scenario comparison" tabindex="0">
+        <table id="comparison">
+          <thead><tr><th scope="col">Method</th><th scope="col">Systems</th><th scope="col">Small systems</th><th scope="col">Reported population sum</th><th scope="col">Modeled cost</th><th scope="col">Weighted score</th><th scope="col">Construction documented</th><th scope="col">Funding unverified</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p class="subtle">The ranking fills the same screened pool in order of weighted benefit per rounded dollar. Both screened methods use the same budget, weights and two-pass small-system rule. Population sums may overlap. Selection signals a candidate for review. Statewide funding coverage and practitioner validation are pending.</p>
+      <div class="changes">
+        <div><h3>Entered the shortlist</h3><ul id="added"></ul></div>
+        <div><h3>Left the shortlist</h3><ul id="removed"></ul></div>
+      </div>
+      <button type="button" id="export">Download scenario and sources (CSV)</button>
+      <details id="shortlist"><summary>Inspect the screened shortlist</summary><ul id="shortlist-items"></ul></details>
+    </section>
+
+    <section class="panel" aria-labelledby="records-title">
+      <h2 id="records-title">Project evidence</h2>
+      <p id="coverage" class="subtle"></p>
+      <div id="records" class="records"></div>
+      <details class="local-form">
+        <summary>Add or update a local project record</summary>
+        <p class="subtle">Record one scope per system. Your browser stores these notes locally and labels them separately from the public evidence included in the demo.</p>
+        <form id="record-form">
+          <div class="record-fields">
+            <label>Water system ID <input name="systemId" list="system-ids" required maxlength="9" placeholder="CA0000000"></label>
+            <datalist id="system-ids"></datalist>
+            <label>Funding stage <select name="stage"><option value="unknown">Unverified</option><option value="planning">Planning support</option><option value="interim">Interim support</option><option value="construction">Construction funding documented</option></select></label>
+            <label>Source date <input name="date" type="date" required></label>
+            <label>HTTPS source URL <input name="url" type="url" required maxlength="1000" placeholder="https://"></label>
+            <label class="full">Project scope <input name="scope" required maxlength="140"></label>
+            <label class="full">Notes <textarea name="note" maxlength="500" rows="3"></textarea></label>
+          </div>
+          <button type="submit">Save local record</button>
+          <p id="form-status" role="status"></p>
+        </form>
+      </details>
+    </section>
+  </div>
+</main>
+</body>
+</html>
