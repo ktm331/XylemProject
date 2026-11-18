@@ -38,6 +38,9 @@
   const infrastructure = await loadData("infrastructure.json");
   const AT_RISK_RATE = forecast.metrics.fallback_at_risk_probability;
 
+  // Correct a documented source-label defect only after frozen data passes its hashes.
+  XylemLabels.apply(systems);
+
   const N = systems.length;
   const baseCost = systems.map((s) => s.cost);
   const costs = baseCost.slice();   // effective cost; rewritten in run() when consolidation routes are switched on
