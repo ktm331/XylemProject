@@ -18,6 +18,8 @@ Open **Review project funding evidence** in the allocation planner to compare a 
 
 A public-record case study follows East Orosi, Daggett and San Ardo through a $500M allocation scenario and a reproducible check of existing construction funding. See [the case study](audit/three-system-case-study/Xylem_Three_System_Case_Study.md).
 
+See [pricing review](PRICING_REVIEW.md) for the checked Claude data, revised size curve, source limitations and allocation effects.
+
 ## Local preview and reproduction
 
 The local app data is refreshed under `historical-event-time-v2`. The old app bytes are preserved in `audit/app-before/`; [allocation comparison](audit/allocation-comparison/README.md) retains 55 old/new plans, complete selected-ID sets, membership changes, costs and scenario stability. [Refresh report](audit/APP_REFRESH_REPORT.md) records hashes, environment, checks and the local preview.
@@ -48,7 +50,7 @@ GitHub Pages is manual-only (`workflow_dispatch`). After local review, the user 
 - **Objective:** sum of population × status weight × (1 + equity weight × equity index). Failing systems count in full. At-Risk systems use exploratory snapshot weights or a manual fixed share. The optimizer maximizes this weighted objective, not unweighted reach. Without a reserve, dynamic programming is exact after costs round up to $250,000 units. A reserve uses sequential small-system and remaining-budget optimizations; this is a priority rule, not a globally optimal reserve constraint. Python and browser implementations are checked for parity.
 - **Forecast:** five selected model families feed `planner_probabilities`. Member predictions are normalized over the full scoring population before outcome or At-Risk filtering, then passed through the frozen training-only map. Rank scores are distinct from these snapshot estimates. Current export refits base models on both assessment transitions; transfer of the frozen map to that refit is unvalidated. Missing At-Risk forecasts use the 2024→2025 training status rate, never the diagnostic outcome rate.
 - **Horizon:** `1-(1-p)^h` is an exploratory funding weight assuming constant annual risk. Annual failure probabilities and the multi-year conversion remain unvalidated. The horizon does not represent measured prevention benefit.
-- **Costs and equity:** modeled costs use 2024 Cost Assessment per-connection averages scaled to the $5.386B state total. Equity averages available DAC, environmental burden, affordability, poverty, social vulnerability and drinking-water indicators. Full-precision inputs are shared by Python and browser plans.
+- **Costs and equity:** modeled costs smooth 2024 Cost Assessment per-connection averages across size bands, then scale to the $5.386B state total. Equity averages available DAC, environmental burden, affordability, poverty, social vulnerability and drinking-water indicators. Full-precision inputs are shared by Python and browser plans.
 - **Routing and map:** saved service areas, counties, approximate consolidation routes and 3D context layers. Viable cheaper routes can replace average costs. Routes are straight-line ×1.3 approximations; receiver capacity and regional construction costs are unresolved.
 - **Stability:** 200 fixed-seed scenarios vary costs, equity 0–2 and horizon 1–10. Selection frequency measures sensitivity to those assumptions, not successful remediation. Stored scenarios use no reserve, routes off and a cost multiplier of 1; incompatible controls suppress stored stability. Interactive cost scenarios use current controls.
 
@@ -58,11 +60,11 @@ Saved SAFER registry: 2026-11-02; 1,062 Failing or At-Risk systems serving 1,931
 
 | Budget | Optimizer reaches | Status-first reaches | Ratio |
 |---|---:|---:|---:|
-| $100M | 171,738 | 168,274 | 1.02× |
-| $250M | 310,205 | 292,238 | 1.06× |
-| $500M | 476,663 | 358,300 | 1.33× |
-| $1000M | 941,150 | 406,664 | 2.31× |
-| $2000M | 1,600,548 | 944,874 | 1.69× |
+| $100M | 130,530 | 130,696 | 1.00× |
+| $250M | 255,091 | 253,993 | 1.00× |
+| $500M | 366,486 | 332,664 | 1.10× |
+| $1000M | 640,238 | 398,342 | 1.61× |
+| $2000M | 1,156,975 | 600,966 | 1.93× |
 
 Status-first funds Failing systems before At-Risk, largest first. It is a simple comparator, not the state's actual allocation process. Ratios describe modeled unweighted reach under different objectives and modeled costs, not actual effectiveness. Exact system counts, costs, membership changes and old/new scenario frequencies are in the comparison files.
 

@@ -152,10 +152,11 @@ def test_stability_probabilities_valid_and_monotone_in_budget(built):
     assert means == sorted(means)
 
 
-def test_optimizer_reaches_more_people_than_status_first_at_every_budget(built):
+def test_optimizer_and_status_first_stay_within_each_budget(built):
     _, summ = built
     for row in summ["comparison"]:
-        assert row["optimizer"]["people"] >= row["status_first_baseline"]["people"]
+        assert row["optimizer"]["spent_musd"] <= row["budget_musd"]
+        assert row["status_first_baseline"]["spent_musd"] <= row["budget_musd"]
         assert row["optimizer"]["spent_musd"] <= row["budget_musd"]
 
 

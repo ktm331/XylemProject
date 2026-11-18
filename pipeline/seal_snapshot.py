@@ -28,6 +28,10 @@ def main():
               'feature_policy': forecast['metrics']['feature_policy'],
               'forecast_provenance': provenance, 'sha256': hashes,
               'limits': summary['forecast_limit']}
+    if 'pricing' in summary:
+        if summary['pricing']['costmodel_sha256'] != file_hash(ROOT / 'pipeline/costmodel.py'):
+            raise ValueError('Stale pricing model; rebuild plans')
+        result['pricing_provenance'] = summary['pricing']
     (OUT / 'snapshot.json').write_text(json.dumps(result, indent=2)+'\n', encoding='utf-8')
     print(snapshot_id)
 

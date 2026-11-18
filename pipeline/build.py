@@ -8,7 +8,8 @@ import pandas as pd
 from scipy.stats import spearmanr, pearsonr, rankdata
 
 sys.path.insert(0, str(Path(__file__).parent))
-from costmodel import system_cost, TABLES  # noqa: E402
+from costmodel import fit_curve, TABLES  # noqa: E402
+from refresh_pricing import pricing_summary
 from optimizer import optimize, greedy_by_population  # noqa: E402
 import extra_features as ef  # noqa: E402
 from feature_policy import fingerprint, file_hash  # noqa: E402
@@ -80,7 +81,8 @@ def main():
     s = d[d.FINAL_SAFER_STATUS.isin(["Failing", "At-Risk"])].copy().reset_index(drop=True)
     s["failing"] = s.FINAL_SAFER_STATUS.eq("Failing")
     s["conn"] = s.SERVICE_CONNECTIONS.clip(lower=1).astype(int)
-    s["cost_raw"] = [system_cost(c, st) for c, st in zip(s.conn, s.FINAL_SAFER_STATUS)]
+    curve = fit_curve(s.conn, s.failing)
+    s["cost_raw"] = curve.cost(s.conn, s.failing)
 
     # ---- calibration against the state's county totals (Table 9) ----
     off = TABLES["county_totals_musd"]
@@ -223,6 +225,7 @@ def main():
         "total_modelled_cost_musd": round(float(costs.sum() / 1e6), 1),
         "cost_assumption_note": TABLES["per_connection_usd"]["_note"],
     }
+    summary["pricing"] = pricing_summary([], curve, factor)
     (OUT / "summary.json").write_text(json.dumps(summary, indent=1, default=str))
     s[["WATER_SYSTEM_NUMBER", "SYSTEM_NAME", "county", "FINAL_SAFER_STATUS", "POPULATION", "conn", "cost"]].to_csv(
         ROOT / "data" / "ranked_systems.csv", index=False)

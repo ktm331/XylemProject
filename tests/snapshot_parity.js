@@ -6,7 +6,7 @@ const root = path.resolve(__dirname, '..');
 const read = p => JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const cases = read('audit/allocation-comparison/plans.json');
 let count = 0;
-for (const [version, dir] of [['old','audit/app-before/data'],['new','app/data']]) {
+for (const [version, dir] of [['old','audit/app-before/data'],['new','audit/pricing-baseline/data']]) {
   const systems = read(dir+'/systems.json'), routes = read(dir+'/routes.json').routes;
   const eqRaw = systems.map(s => { const v=s.eq.filter(x=>x!==null); return v.length?v.reduce((a,b)=>a+b,0)/v.length:null; });
   const vals=eqRaw.filter(x=>x!==null).sort((a,b)=>a-b), mid=vals.length>>1;

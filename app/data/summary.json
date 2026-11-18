@@ -62,100 +62,100 @@
  "n_scenarios": 200,
  "sigma_system": 0.421,
  "calibration": {
-  "raw_total_musd": 7901.4,
+  "raw_total_musd": 5734.2,
   "official_total_musd": 5386,
-  "scale_factor": 0.6816,
+  "scale_factor": 0.9393,
   "counties_compared": 58,
-  "spearman_county": 0.882,
-  "pearson_county": 0.921,
-  "log_ratio_sd_county": 0.862,
-  "median_abs_pct_error_county_ge10M": 40.9,
-  "note": "Raw model overshoots the state total because our 2026 list has more systems than the state's 2024 list and Table 7 averages are not size-weighted; we scale to the state total and report the county-level fit."
+  "spearman_county": 0.903,
+  "pearson_county": 0.923,
+  "log_ratio_sd_county": 0.77,
+  "median_abs_pct_error_county_ge10M": 31.8,
+  "note": "County comparison of the smoothed Table 7 model against historic 2024 totals; this is not project-level price validation."
  },
  "comparison": [
   {
    "budget_musd": 100,
    "optimizer": {
-    "systems": 20,
-    "people": 171738,
-    "spent_musd": 97.8,
-    "dac_people": 166136,
-    "small_systems": 9
+    "systems": 10,
+    "people": 130530,
+    "spent_musd": 98.6,
+    "dac_people": 128826,
+    "small_systems": 3
    },
    "status_first_baseline": {
-    "systems": 13,
-    "people": 168274,
-    "spent_musd": 100.0,
-    "dac_people": 155181,
-    "small_systems": 3
+    "systems": 9,
+    "people": 130696,
+    "spent_musd": 99.9,
+    "dac_people": 128826,
+    "small_systems": 2
    }
   },
   {
    "budget_musd": 250,
    "optimizer": {
-    "systems": 51,
-    "people": 310205,
-    "spent_musd": 243.2,
-    "dac_people": 241976,
-    "small_systems": 24
+    "systems": 42,
+    "people": 255091,
+    "spent_musd": 244.4,
+    "dac_people": 211998,
+    "small_systems": 23
    },
    "status_first_baseline": {
-    "systems": 32,
-    "people": 292238,
+    "systems": 22,
+    "people": 253993,
     "spent_musd": 249.9,
-    "dac_people": 232154,
-    "small_systems": 5
+    "dac_people": 211998,
+    "small_systems": 2
    }
   },
   {
    "budget_musd": 500,
    "optimizer": {
-    "systems": 97,
-    "people": 476663,
-    "spent_musd": 487.9,
-    "dac_people": 368352,
-    "small_systems": 48
+    "systems": 76,
+    "people": 366486,
+    "spent_musd": 490.4,
+    "dac_people": 272378,
+    "small_systems": 38
    },
    "status_first_baseline": {
-    "systems": 68,
-    "people": 358300,
-    "spent_musd": 499.9,
-    "dac_people": 271413,
-    "small_systems": 23
+    "systems": 46,
+    "people": 332664,
+    "spent_musd": 500.0,
+    "dac_people": 256494,
+    "small_systems": 5
    }
   },
   {
    "budget_musd": 1000,
    "optimizer": {
-    "systems": 196,
-    "people": 941150,
-    "spent_musd": 976.6,
-    "dac_people": 725848,
-    "small_systems": 128
+    "systems": 160,
+    "people": 640238,
+    "spent_musd": 980.7,
+    "dac_people": 521897,
+    "small_systems": 103
    },
    "status_first_baseline": {
-    "systems": 185,
-    "people": 406664,
+    "systems": 152,
+    "people": 398342,
     "spent_musd": 999.9,
-    "dac_people": 300808,
-    "small_systems": 140
+    "dac_people": 296348,
+    "small_systems": 107
    }
   },
   {
    "budget_musd": 2000,
    "optimizer": {
-    "systems": 409,
-    "people": 1600548,
-    "spent_musd": 1950.1,
-    "dac_people": 1199691,
-    "small_systems": 301
+    "systems": 328,
+    "people": 1156975,
+    "spent_musd": 1961.6,
+    "dac_people": 867897,
+    "small_systems": 240
    },
    "status_first_baseline": {
-    "systems": 438,
-    "people": 944874,
-    "spent_musd": 2000.0,
-    "dac_people": 677518,
-    "small_systems": 384
+    "systems": 431,
+    "people": 600966,
+    "spent_musd": 1999.8,
+    "dac_people": 390301,
+    "small_systems": 383
    }
   }
  ],
@@ -163,7 +163,7 @@
   "n_systems": 1062,
   "n_funded_since_2017": 176,
   "auc_need_benefit_vs_funded": 0.715,
-  "auc_efficiency_vs_funded": 0.69,
+  "auc_efficiency_vs_funded": 0.7,
   "auc_population_vs_funded": 0.646,
   "auc_failing_flag_vs_funded": 0.627,
   "funded_share_failing": 0.254,
@@ -184,7 +184,7 @@
    "systems": 5,
    "failing": 3,
    "people": 1782,
-   "cost_musd": 15.8,
+   "cost_musd": 18.3,
    "official_musd": 39.870000000000005
   },
   {
@@ -192,7 +192,7 @@
    "systems": 15,
    "failing": 6,
    "people": 2106,
-   "cost_musd": 38.1,
+   "cost_musd": 48.9,
    "official_musd": 44.39
   },
   {
@@ -200,7 +200,7 @@
    "systems": 3,
    "failing": 0,
    "people": 840,
-   "cost_musd": 16.4,
+   "cost_musd": 13.1,
    "official_musd": 12.030000000000001
   },
   {
@@ -208,7 +208,7 @@
    "systems": 3,
    "failing": 2,
    "people": 7347,
-   "cost_musd": 21.4,
+   "cost_musd": 22.1,
    "official_musd": 41.510000000000005
   },
   {
@@ -216,7 +216,7 @@
    "systems": 10,
    "failing": 5,
    "people": 2428,
-   "cost_musd": 38.7,
+   "cost_musd": 29.8,
    "official_musd": 25.83
   },
   {
@@ -224,7 +224,7 @@
    "systems": 8,
    "failing": 5,
    "people": 1007,
-   "cost_musd": 47.4,
+   "cost_musd": 34.2,
    "official_musd": 9.61
   },
   {
@@ -232,7 +232,7 @@
    "systems": 6,
    "failing": 0,
    "people": 445,
-   "cost_musd": 23.9,
+   "cost_musd": 22.5,
    "official_musd": 13.479999999999999
   },
   {
@@ -240,7 +240,7 @@
    "systems": 69,
    "failing": 30,
    "people": 144848,
-   "cost_musd": 294.1,
+   "cost_musd": 319.4,
    "official_musd": 414.22
   },
   {
@@ -248,7 +248,7 @@
    "systems": 3,
    "failing": 0,
    "people": 431,
-   "cost_musd": 33.4,
+   "cost_musd": 13.6,
    "official_musd": 16.42
   },
   {
@@ -256,7 +256,7 @@
    "systems": 13,
    "failing": 8,
    "people": 5957,
-   "cost_musd": 60.6,
+   "cost_musd": 64.0,
    "official_musd": 17.51
   },
   {
@@ -264,7 +264,7 @@
    "systems": 17,
    "failing": 7,
    "people": 88333,
-   "cost_musd": 89.7,
+   "cost_musd": 107.6,
    "official_musd": 91.31
   },
   {
@@ -272,7 +272,7 @@
    "systems": 9,
    "failing": 3,
    "people": 661,
-   "cost_musd": 48.8,
+   "cost_musd": 36.4,
    "official_musd": 40.89
   },
   {
@@ -280,7 +280,7 @@
    "systems": 102,
    "failing": 47,
    "people": 236474,
-   "cost_musd": 510.6,
+   "cost_musd": 531.2,
    "official_musd": 668.8
   },
   {
@@ -288,7 +288,7 @@
    "systems": 10,
    "failing": 3,
    "people": 73725,
-   "cost_musd": 61.7,
+   "cost_musd": 79.2,
    "official_musd": 121.34
   },
   {
@@ -296,7 +296,7 @@
    "systems": 13,
    "failing": 3,
    "people": 6714,
-   "cost_musd": 78.9,
+   "cost_musd": 65.0,
    "official_musd": 102.1
   },
   {
@@ -304,7 +304,7 @@
    "systems": 8,
    "failing": 3,
    "people": 2178,
-   "cost_musd": 34.4,
+   "cost_musd": 29.0,
    "official_musd": 0.0
   },
   {
@@ -312,7 +312,7 @@
    "systems": 55,
    "failing": 14,
    "people": 266296,
-   "cost_musd": 369.1,
+   "cost_musd": 385.0,
    "official_musd": 219.31
   },
   {
@@ -320,7 +320,7 @@
    "systems": 47,
    "failing": 28,
    "people": 23368,
-   "cost_musd": 223.6,
+   "cost_musd": 206.9,
    "official_musd": 165.07999999999998
   },
   {
@@ -328,7 +328,7 @@
    "systems": 2,
    "failing": 0,
    "people": 1973,
-   "cost_musd": 5.4,
+   "cost_musd": 8.2,
    "official_musd": 2.05
   },
   {
@@ -336,7 +336,7 @@
    "systems": 4,
    "failing": 1,
    "people": 3281,
-   "cost_musd": 13.9,
+   "cost_musd": 16.4,
    "official_musd": 16.23
   },
   {
@@ -344,7 +344,7 @@
    "systems": 12,
    "failing": 7,
    "people": 9568,
-   "cost_musd": 52.6,
+   "cost_musd": 56.3,
    "official_musd": 42.769999999999996
   },
   {
@@ -352,7 +352,7 @@
    "systems": 23,
    "failing": 10,
    "people": 90999,
-   "cost_musd": 116.1,
+   "cost_musd": 139.9,
    "official_musd": 212.75
   },
   {
@@ -360,7 +360,7 @@
    "systems": 1,
    "failing": 0,
    "people": 629,
-   "cost_musd": 2.0,
+   "cost_musd": 5.1,
    "official_musd": 0.0
   },
   {
@@ -368,7 +368,7 @@
    "systems": 7,
    "failing": 2,
    "people": 1493,
-   "cost_musd": 32.0,
+   "cost_musd": 32.5,
    "official_musd": 15.07
   },
   {
@@ -376,7 +376,7 @@
    "systems": 61,
    "failing": 19,
    "people": 21115,
-   "cost_musd": 260.7,
+   "cost_musd": 251.8,
    "official_musd": 181.28
   },
   {
@@ -384,7 +384,7 @@
    "systems": 11,
    "failing": 4,
    "people": 25835,
-   "cost_musd": 64.4,
+   "cost_musd": 62.5,
    "official_musd": 62.61
   },
   {
@@ -392,7 +392,7 @@
    "systems": 6,
    "failing": 1,
    "people": 10068,
-   "cost_musd": 26.3,
+   "cost_musd": 34.7,
    "official_musd": 27.12
   },
   {
@@ -400,7 +400,7 @@
    "systems": 3,
    "failing": 0,
    "people": 382,
-   "cost_musd": 20.5,
+   "cost_musd": 15.4,
    "official_musd": 3.32
   },
   {
@@ -408,7 +408,7 @@
    "systems": 2,
    "failing": 0,
    "people": 400,
-   "cost_musd": 7.5,
+   "cost_musd": 10.2,
    "official_musd": 19.23
   },
   {
@@ -416,7 +416,7 @@
    "systems": 3,
    "failing": 3,
    "people": 889,
-   "cost_musd": 12.7,
+   "cost_musd": 13.5,
    "official_musd": 16.84
   },
   {
@@ -424,7 +424,7 @@
    "systems": 29,
    "failing": 11,
    "people": 82880,
-   "cost_musd": 194.3,
+   "cost_musd": 184.3,
    "official_musd": 154.79000000000002
   },
   {
@@ -432,7 +432,7 @@
    "systems": 23,
    "failing": 4,
    "people": 6734,
-   "cost_musd": 102.6,
+   "cost_musd": 99.6,
    "official_musd": 214.7
   },
   {
@@ -440,7 +440,7 @@
    "systems": 9,
    "failing": 4,
    "people": 808,
-   "cost_musd": 25.8,
+   "cost_musd": 25.5,
    "official_musd": 44.2
   },
   {
@@ -448,7 +448,7 @@
    "systems": 49,
    "failing": 26,
    "people": 346444,
-   "cost_musd": 376.1,
+   "cost_musd": 469.3,
    "official_musd": 355.64
   },
   {
@@ -456,7 +456,7 @@
    "systems": 34,
    "failing": 20,
    "people": 10961,
-   "cost_musd": 148.0,
+   "cost_musd": 153.2,
    "official_musd": 105.56
   },
   {
@@ -464,7 +464,7 @@
    "systems": 47,
    "failing": 8,
    "people": 11169,
-   "cost_musd": 319.0,
+   "cost_musd": 193.8,
    "official_musd": 271.85
   },
   {
@@ -472,7 +472,7 @@
    "systems": 22,
    "failing": 9,
    "people": 29764,
-   "cost_musd": 99.9,
+   "cost_musd": 123.0,
    "official_musd": 123.53
   },
   {
@@ -480,7 +480,7 @@
    "systems": 9,
    "failing": 3,
    "people": 3598,
-   "cost_musd": 49.1,
+   "cost_musd": 35.3,
    "official_musd": 18.45
   },
   {
@@ -488,7 +488,7 @@
    "systems": 13,
    "failing": 5,
    "people": 2669,
-   "cost_musd": 58.1,
+   "cost_musd": 41.0,
    "official_musd": 110.85
   },
   {
@@ -496,7 +496,7 @@
    "systems": 12,
    "failing": 6,
    "people": 1362,
-   "cost_musd": 34.2,
+   "cost_musd": 35.1,
    "official_musd": 59.28
   },
   {
@@ -504,7 +504,7 @@
    "systems": 21,
    "failing": 4,
    "people": 4965,
-   "cost_musd": 57.1,
+   "cost_musd": 71.7,
    "official_musd": 64.15
   },
   {
@@ -512,7 +512,7 @@
    "systems": 13,
    "failing": 3,
    "people": 6233,
-   "cost_musd": 72.2,
+   "cost_musd": 58.1,
    "official_musd": 49.34
   },
   {
@@ -520,7 +520,7 @@
    "systems": 2,
    "failing": 0,
    "people": 926,
-   "cost_musd": 5.6,
+   "cost_musd": 10.2,
    "official_musd": 9.09
   },
   {
@@ -528,7 +528,7 @@
    "systems": 15,
    "failing": 6,
    "people": 3901,
-   "cost_musd": 63.7,
+   "cost_musd": 50.7,
    "official_musd": 23.64
   },
   {
@@ -536,7 +536,7 @@
    "systems": 2,
    "failing": 0,
    "people": 89,
-   "cost_musd": 2.5,
+   "cost_musd": 6.0,
    "official_musd": 20.28
   },
   {
@@ -544,7 +544,7 @@
    "systems": 52,
    "failing": 33,
    "people": 18788,
-   "cost_musd": 204.8,
+   "cost_musd": 204.9,
    "official_musd": 152.21
   },
   {
@@ -552,7 +552,7 @@
    "systems": 31,
    "failing": 14,
    "people": 74781,
-   "cost_musd": 155.0,
+   "cost_musd": 153.3,
    "official_musd": 188.54000000000002
   },
   {
@@ -560,7 +560,7 @@
    "systems": 7,
    "failing": 3,
    "people": 10624,
-   "cost_musd": 28.9,
+   "cost_musd": 25.6,
    "official_musd": 28.480000000000004
   },
   {
@@ -568,7 +568,7 @@
    "systems": 17,
    "failing": 2,
    "people": 2581,
-   "cost_musd": 80.0,
+   "cost_musd": 74.5,
    "official_musd": 57.61
   },
   {
@@ -576,7 +576,7 @@
    "systems": 6,
    "failing": 4,
    "people": 5002,
-   "cost_musd": 24.5,
+   "cost_musd": 29.2,
    "official_musd": 12.98
   },
   {
@@ -584,7 +584,7 @@
    "systems": 63,
    "failing": 27,
    "people": 118557,
-   "cost_musd": 322.5,
+   "cost_musd": 337.3,
    "official_musd": 406.15
   },
   {
@@ -592,7 +592,7 @@
    "systems": 16,
    "failing": 5,
    "people": 4115,
-   "cost_musd": 105.5,
+   "cost_musd": 75.1,
    "official_musd": 64.43
   },
   {
@@ -600,7 +600,7 @@
    "systems": 21,
    "failing": 9,
    "people": 87326,
-   "cost_musd": 139.2,
+   "cost_musd": 146.0,
    "official_musd": 85.02000000000001
   },
   {
@@ -608,7 +608,7 @@
    "systems": 6,
    "failing": 3,
    "people": 57580,
-   "cost_musd": 43.5,
+   "cost_musd": 61.3,
    "official_musd": 71.66
   },
   {
@@ -616,10 +616,51 @@
    "systems": 11,
    "failing": 3,
    "people": 7721,
-   "cost_musd": 52.8,
+   "cost_musd": 49.0,
    "official_musd": 23.72
   }
  ],
  "total_modelled_cost_musd": 5386.0,
- "cost_assumption_note": "At-Risk has no value for >30,000 connections (state lists N/A). We assume the Failing value (1409) and flag it as an assumption."
+ "cost_assumption_note": "At-Risk has no value for >30,000 connections (state lists N/A). We assume the Failing value (1409) and flag it as an assumption.",
+ "pricing": {
+  "method": "Smooth 2024 Table 7 size curves, scaled to the published 2024 statewide total",
+  "costmodel_sha256": "ed60ca260fc6fb11e42d2a8afb3c6923d7c40a4159d4d64bef81ff572d5af333",
+  "curve_knots": {
+   "failing": {
+    "conn": [
+     27.0,
+     179.0,
+     692.0,
+     2292.0,
+     4113.0
+    ],
+    "per_conn": [
+     139954.0,
+     31800.0,
+     15000.0,
+     5618.800252430816,
+     3131.1184484734813
+    ]
+   },
+   "at_risk": {
+    "conn": [
+     23.0,
+     173.0,
+     677.0,
+     2052.5,
+     7578.0
+    ],
+    "per_conn": [
+     236985.34881943912,
+     31506.722675416764,
+     8051.200920010488,
+     5382.0,
+     3161.0
+    ]
+   }
+  },
+  "scale_factor": 0.939274310764055,
+  "source_year": 2024,
+  "note": "No price escalation or project-award multiplier. Published grants have mixed scopes and are not final costs. The 0.5x\u20132x range is illustrative, not a calibrated confidence interval."
+ }
 }
