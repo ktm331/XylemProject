@@ -42,7 +42,13 @@
   XylemLabels.apply(systems);
 
   const N = systems.length;
-  const baseCost = systems.map((s) => s.cost);
+  const baseCost = systems.map((s) => XylemPricing.verified(s)?.cost || s.cost);
+  const scopes = {};
+  try {
+    const saved = JSON.parse(new URLSearchParams(location.hash.slice(1)).get("projects") || "{}");
+    for (const s of systems) if (XylemPricing.estimate(s, saved[s.id])) scopes[s.id] = saved[s.id];
+  } catch (_) { /* Invalid shared scope falls back to the saved model. */ }
+  const scopeKey = () => JSON.stringify(scopes);
   const costs = baseCost.slice();   // effective cost; rewritten in run() when consolidation routes are switched on
   const pops = systems.map((s) => s.pop);
   const conns = systems.map((s) => s.conn);
@@ -88,8 +94,9 @@
   function applyCosts() {
     for (let i = 0; i < N; i++) {
       const r = RT[systems[i].id];
-      viaRoute[i] = st.c && r && r.viable && r.cost < baseCost[i] ? 1 : 0;
-      costs[i] = (viaRoute[i] ? r.cost : baseCost[i]) * st.m;
+      const project = XylemPricing.estimate(systems[i], scopes[systems[i].id]);
+      viaRoute[i] = !project && st.c && r && r.viable && r.cost < baseCost[i] ? 1 : 0;
+      costs[i] = (project ? project.cost : viaRoute[i] ? r.cost : baseCost[i]) * st.m;
       systems[i].cost = costs[i]; systems[i].lo = Math.round(costs[i] * 0.5); systems[i].hi = Math.round(costs[i] * 2);
     }
   }
@@ -114,7 +121,7 @@
     // stability at nearest precomputed budget
     const bs = summary.budgets_musd;
     let k = 0, bd = 1e9; bs.forEach((b, j) => { const d = Math.abs(Math.log(b / st.b)); if (d < bd) { bd = d; k = j; } });
-    plan.stabK = k; plan.stabOK = bd < Math.log(1.6) && !st.c && st.v === "fc" && st.l <= 2 && st.r === 0 && st.m === 1; plan.stabBudget = bs[k];   // stress tests ran on average-based costs
+    plan.stabK = k; plan.stabOK = !systems.some(s => XylemPricing.verified(s)) && !Object.keys(scopes).length && bd < Math.log(1.6) && !st.c && st.v === "fc" && st.l <= 2 && st.r === 0 && st.m === 1; plan.stabBudget = bs[k];   // stress tests ran on average-based costs
     const strong = plan.stabOK ? chosen.filter((i) => systems[i].p[k] >= 0.5).length / Math.max(1, chosen.length) : null;
     plan.robust = strong;
   }
@@ -261,7 +268,7 @@
   // ---------- cost scenarios: how often is each system selected when its cost estimate is wrong? ----------
   let scen = null;
   function rng(seed) { let s = seed >>> 0; return () => { s = (s + 0x6D2B79F5) >>> 0; let t = s; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
-  const scenarioKey = () => [st.b, st.l, st.h, st.v, st.a, st.r, st.c, st.m].join();
+  const scenarioKey = () => [st.b, st.l, st.h, st.v, st.a, st.r, st.c, st.m, scopeKey()].join();
   let scenarioGeneration = 0;
   async function runScenarios() {
     const btn = $("#runScen"), out = $("#scenOut"), K = 40, rand = rng(11), hits = new Uint16Array(N);
@@ -316,6 +323,24 @@
       <div><span class="l">Selected when costs vary</span><b>${fresh ? `${scen.hits[i]} of ${scen.K} scenarios` : plan.stabOK ? pct(s.p[plan.stabK]) + " of stress tests" : "run the scenarios"}</b></div></div>
       <div style="margin-top:10px">${routeLine(i)}</div>${s.analytes ? `<div class="mute">Issue: ${esc(s.analytes)}</div>` : ""}`;
     $("#detailX").onclick = closeDetail;
+    const picker = document.createElement("details");
+    picker.className = "grp";
+    const project = XylemPricing.estimate(s, scopes[s.id]);
+    const published = XylemPricing.verified(s);
+    picker.innerHTML = `<summary>Project pricing: ${esc(project ? project.label : "scope unspecified")}</summary>
+      ${published ? `<p><a href="${published.source}">${esc(published.label)}: ${fmtM(published.cost)} (${published.year})</a>. ${esc(published.kind)}. This is the default project budget for this system.</p>` : ""}
+      <p>Select the planned work to explore a state-average scope scenario in the allocation. These rates have not demonstrated better project prediction accuracy. Combine a primary solution with additional work as needed. A single component may not resolve every issue.</p>
+      <fieldset><legend>Planned project scope</legend>${XylemPricing.types.map(t => `<label class="chk"><input type="checkbox" data-project="${t.id}" ${scopes[s.id]?.includes(t.id) ? "checked" : ""} ${!XylemPricing.estimate(s, [t.id]) ? "disabled" : ""}> ${esc(t.name)} (${t[s.failing ? "failing" : "at_risk"] == null ? "no published rate" : "$" + fmtN(t[s.failing ? "failing" : "at_risk"])}/connection)</label>`).join("")}</fieldset>
+      <p role="status" id="projectError"></p><button type="button" id="applyProject">Apply scope scenario</button> <button type="button" id="clearProject">Use default estimate</button>
+      <p><a href="${XylemPricing.source}" target="_blank" rel="noopener">State Water Board, 2024 Cost Assessment, Table 8, page 8</a>. Published long-term solution averages in 2024 dollars; no statewide rescaling or assumed 2026 inflation. K-12 schools require separate rates.</p>
+      <details><summary>Why can the actual price vary?</summary><p>The displayed 0.5×–2× range is an illustrative sensitivity range, not a measured confidence interval. Location, economy, bid date, pipe length, capacity, well depth, contaminants, permitting and additional work can move prices outside it. Scope selection is a planning scenario, not confirmation that remediation is complete.</p></details>`;
+    d.appendChild(picker);
+    $("#applyProject").onclick = () => {
+      const ids = [...picker.querySelectorAll("input:checked")].map(x => x.dataset.project);
+      if (!XylemPricing.estimate(s, ids)) { $("#projectError").textContent = "Choose an available scope with at most one primary solution: consolidation, centralized treatment or decentralized treatment."; return; }
+      scopes[s.id] = ids; update();
+    };
+    $("#clearProject").onclick = () => { delete scopes[s.id]; update(); };
     if (focusedId) $("#" + focusedId)?.focus({preventScroll: true});
   }
 
@@ -397,6 +422,14 @@
     const c = summary.calibration, v = summary.validation, cmp = summary.comparison;
     const el = document.createElement("div"); el.className = "prose";
     el.innerHTML = `
+      <h3>Prices by project scope</h3>
+      <p>Robbins now uses its documented 2025 $8M treatment facility budget instead of a $4.57M blended estimate. This corrects agreement with a published budget; it is not a test against final costs. Existing awards are not deducted, so this planner estimates total project budgets rather than remaining grant need. The 2024 average treatment rate would give only $1.17M for Robbins, so type averages are optional scenarios rather than automatic replacements. Stored stress tests predate this correction; run current cost scenarios.</p>
+      <p>Open a system and expand Project pricing to choose planned work. The selected components replace its blended cost in the optimizer, map, detail card and export. Current scope scenarios: ${Object.keys(scopes).length}. Share the URL to preserve them.</p>
+      <div class="scroll"><table><thead><tr><th>Long-term solution</th><th>Failing $/connection</th><th>At-Risk $/connection</th></tr></thead><tbody>${XylemPricing.types.map(t => `<tr><td>${esc(t.name)}</td><td>$${fmtN(t.failing)}</td><td>${t.at_risk == null ? "Unavailable" : "$" + fmtN(t.at_risk)}</td></tr>`).join("")}</tbody></table></div>
+      <p><a href="${XylemPricing.source}">Source: State Water Board Table 8 (2024), page 8</a>. These are modeled averages; the source does not establish a statistical range for each type. Multiple types can be needed at one system.</p>
+      <h3>Recent published project amounts</h3>
+      <p>Recent examples help check scope and scale. Budgets and grant awards are labeled below; they do not establish final construction cost or validate prediction accuracy.</p>
+      ${XylemProjectExamples.map(p => `<details><summary>${esc(p.type)} · ${esc(p.name)} · ${fmtM(p.amount)}</summary><p>${esc(p.kind)} · ${p.date}. ${esc(p.scope)} <a href="${p.url}" target="_blank" rel="noopener">Official source</a></p></details>`).join("")}
       <h3>What the optimizer does</h3>
       <p>For a budget B it chooses the set of Failing and At-Risk systems that maximizes the weighted population objective subject to total modelled cost ≤ B. Weighted objective = people served × status weight (Failing 1, At-Risk as set) × (1 + equity weight × equity index). With no reserve, dynamic programming solves the 0/1 knapsack exactly after costs round up to $250k units, so a plan never overspends. A small-system reserve runs two sequential knapsacks: first small systems within the reserved amount, then remaining systems within the remaining budget. This is a priority rule, not proof of a globally optimal reserve-constrained plan. The same code runs in Python (reference) and in your browser; a test checks they pick identical systems.</p>
       <h3>Where the costs come from</h3>
@@ -452,7 +485,8 @@
       <p><b>Clustering.</b> Failing systems are spatially clustered: Moran's I = ${t.morans_i_failing} (random would be about 0), permutation p = ${t.morans_p_permutation_999}, ${t.radius_km} km neighbourhoods, ${fmtN(t.n_systems)} systems. The clustering is statistically clear but weak. <b>Hotspots.</b> Getis-Ord Gi* on people served by Failing or At-Risk systems flags ${t.hotspots_p05} systems at p&lt;0.05 and ${t.hotspots_p01} at p&lt;0.01 (rings on the map; not corrected for multiple testing). <b>Hubs.</b> ${t.hubs_with_3plus} healthy systems are modeled as potential receivers for three or more at-risk neighbours; capacity is unverified and; see the Hubs tab.</p>`; })() : ""}
       <h3>Stress test</h3>
       <p>${summary.n_scenarios} scenarios. In each, costs are multiplied by a county-level error drawn from the observed county errors above and a per-system lognormal error (σ ${summary.sigma_system}), and the equity weight (0–2) and the forecast horizon (1–10 years) are redrawn. The optimizer is re-run at $100M, $250M, $500M, $1B and $2B. Stability is the share of scenarios in which a system is funded, not a probability of successful remediation. Stored scenarios use no small-system reserve, routes off and a cost multiplier of 1.</p>
-      <h3>Optimizer versus a status-first process</h3>
+      <h3>Saved comparison before project budget corrections</h3>
+      <p>This historical table uses the frozen blended estimates, before the Robbins correction and any selected scope scenarios. The live map and plan tables use current project costs.</p>
       <div class="scroll"><table><thead><tr><th>Budget</th><th class="num">Optimizer people</th><th class="num">Status-first people</th><th class="num">Ratio</th><th class="num">Optimizer systems</th><th class="num">Status-first systems</th></tr></thead><tbody>
       ${cmp.map((r) => `<tr><td>$${fmtN(r.budget_musd)}M</td><td class="num">${fmtN(r.optimizer.people)}</td><td class="num">${fmtN(r.status_first_baseline.people)}</td><td class="num">${(r.optimizer.people / r.status_first_baseline.people).toFixed(2)}×</td><td class="num">${r.optimizer.systems}</td><td class="num">${r.status_first_baseline.systems}</td></tr>`).join("")}</tbody></table></div>
       <p class="mute">Status-first = fund Failing systems before At-Risk, largest first, until the money runs out. This is a simple stand-in, not the state's actual process, which also weighs readiness, willingness and technical assistance needs.</p>
@@ -551,6 +585,7 @@
   }
   function writeHash() {
     const p = new URLSearchParams({ b: st.b, l: st.l, h: st.h, v: st.v, a: st.a, r: st.r, c: st.c, m: st.m });
+    if (Object.keys(scopes).length) p.set("projects", scopeKey());
     history.replaceState(null, "", "#" + p.toString());
   }
   // One polite, atomic summary after a quiet interval. Never announce table redraws
@@ -615,7 +650,7 @@
     const head = ["water_system_id", "name", "county", "status", "people", "connections", "cost_usd", "cost_per_person", "solution", "snapshot_probability", "allocation_weight", "forecast_source", "stability_pct", "economic_status", "hotspot_z"];
     const rows = plan.chosen.map((i) => { const s = systems[i];
       return [s.id, s.name, s.county, s.failing ? "Failing" : "At-Risk", s.pop, s.conn, s.cost, Math.round(s.cost / s.pop),
-        viaRoute[i] ? `Consolidate into ${RT[s.id].receiver_name}` : "Modelled average",
+        XylemPricing.estimate(s, scopes[s.id])?.label || (viaRoute[i] ? `Consolidate into ${RT[s.id].receiver_name}` : XylemPricing.verified(s) ? XylemPricing.verified(s).label + " (2025 published budget)" : "Modelled average"),
         s.pf == null ? "" : s.pf, s.failing ? 1 : st.v === "fc" ? 1 - Math.pow(1 - s.pf, st.h) : st.a, s.forecast_source, plan.stabOK ? Math.round(s.p[plan.stabK] * 100) : "", s.dac, gis && gis.z[s.id] !== undefined ? gis.z[s.id] : ""].map(q).join(","); });
     const blob = new Blob([`# Budget_USD ${st.b * 1e6}; selected_systems ${plan.chosen.length}; modeled_people ${plan.people}; modeled_cost_usd ${plan.spent}; scenario ${new URLSearchParams({b:st.b,l:st.l,h:st.h,v:st.v,a:st.a,r:st.r,c:st.c,m:st.m})}; stability_budget_musd ${plan.stabOK ? plan.stabBudget : "unavailable"}\n# Snapshot ${snapshot.id}; UI_build ${build.id}; diagnostic snapshot estimates; annual failure probabilities and constant-annual-risk horizon conversion unvalidated.\n# Xylem placement plan: budget ${fmtM(st.b * 1e6)}, equity ${st.l}, ${st.v === "fc" ? "forecast horizon " + st.h + " yr" : "fixed At-Risk share " + pct(st.a)}, small-system reserve ${pct(st.r)}, routes ${st.c}, cost multiplier ${st.m}; stability ${plan.stabOK ? "stored at " + plan.stabBudget + "M, no reserve/routes, multiplier 1" : "unavailable for these controls"}; reach is modeled population, not measured intervention benefit; costs modeled; routes approximate\n`, head.join(",") + "\n" + rows.join("\n")], { type: "text/csv" });
     const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "xylem-placement-plan.csv"; a.click(); URL.revokeObjectURL(a.href);
