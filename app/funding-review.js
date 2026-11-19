@@ -8,6 +8,10 @@
   const money = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
   const storageKey = "xylem-funding-review-records";
   const tracking = new Set();
+  const params = new URLSearchParams(location.search);
+  const requestedId = params.get("system")?.toUpperCase();
+  const plannerScenario = new URLSearchParams(params.get("scenario") ?? "");
+  if (plannerScenario.has("b")) $("planner-link").hash = plannerScenario.toString();
 
   function element(tag, value, className) {
     const node = document.createElement(tag);
@@ -70,6 +74,24 @@
 
   const records = () => [...builtIn.values(), ...local.values()];
   const recordFor = (id) => builtIn.get(id) ?? local.get(id);
+
+  function renderRequestedSystem() {
+    const system = byId.get(requestedId);
+    if (!system) return;
+    const record = recordFor(system.id);
+    $("requested-system").hidden = false;
+    $("requested-title").textContent = system.name;
+    $("requested-status").textContent = record
+      ? model.stageInfo[record.stage][0] + ". " + record.scope
+      : "Funding is unverified for this system in the current review.";
+    const link = $("requested-link");
+    link.href = record ? "#record-" + system.id : "#add-project-record";
+    link.textContent = record ? "Read the evidence and sources" : "Add a local project record";
+    link.onclick = record ? null : () => {
+      $("add-project-record").open = true;
+      $("record-form").elements.systemId.value = system.id;
+    };
+  }
   function persist() {
     try {
       localStorage.setItem(storageKey, JSON.stringify([...local.values()]));
@@ -88,6 +110,7 @@
   $("system-ids").append(idOptions);
 
   function renderCards() {
+    renderRequestedSystem();
     $("coverage").textContent = "Public records for " + dataset.records.length + " of " + format.format(systems.length) +
       " systems, reviewed " + dataset.reviewedOn + ". The sample covers different types of projects. " +
       "Systems without funding evidence remain unverified." +
@@ -115,7 +138,7 @@
         checkbox.type = "checkbox";
         checkbox.dataset.track = system.id;
         checkbox.setAttribute("aria-label", "Track " + system.name + " separately");
-        label.append(checkbox, document.createTextNode("Track this funded scope separately"));
+        label.append(checkbox, document.createTextNode("Set this project aside for the scenario"));
         checkbox.addEventListener("change", () => {
           if (checkbox.checked) tracking.add(system.id);
           else tracking.delete(system.id);
@@ -196,10 +219,11 @@
       return row;
     }));
     const tracked = result.excluded.size;
+    const projectCount = tracked === 1 ? "1 project set aside" : format.format(tracked) + " projects set aside";
     $("result-status").textContent = tracked
-      ? format.format(tracked) + (tracked === 1 ? " scope tracked" : " scopes tracked") +
-        ". " + result.added.length + " entered and " + result.removed.length + " left the modeled shortlist."
-      : "Choose a documented construction scope to see how the shortlist changes.";
+      ? projectCount + ". " + result.added.length + " entered and " + result.removed.length + " left the modeled shortlist."
+      : format.format(result.original.length) + " systems on the modeled shortlist. Try East Orosi or choose another documented construction project below.";
+    $("changes").hidden = tracked === 0;
     list("added", result.added);
     list("removed", result.removed, "removed");
     list("shortlist-items", result.screened);
@@ -211,8 +235,14 @@
     renderResults();
   }
 
-  $("east").addEventListener("click", () => trackOnly(["CA5401003"]));
-  $("all").addEventListener("click", () => trackOnly(dataset.records
+  function tryExample(ids) {
+    trackOnly(ids);
+    const heading = $("result-title");
+    heading.focus({preventScroll: true});
+    heading.scrollIntoView({block: "start"});
+  }
+  $("east").addEventListener("click", () => tryExample(["CA5401003"]));
+  $("all").addEventListener("click", () => tryExample(dataset.records
     .filter((record) => record.stage === "construction").map((record) => record.systemId)));
   $("reset").addEventListener("click", () => trackOnly([]));
   $("budget").addEventListener("change", renderResults);

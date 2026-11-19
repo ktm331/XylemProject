@@ -20,7 +20,8 @@ a { color: var(--accent); text-underline-offset: .18em; overflow-wrap: anywhere;
 .masthead .wrap { display: flex; gap: 1rem; align-items: center; justify-content: space-between; min-height: 3.7rem; }
 .masthead a { color: #fff; }
 .brand { font-size: 1.2rem; font-weight: 750; }
-.back { font-size: .89rem; }
+.top-nav { display: flex; flex-wrap: wrap; gap: .2rem .7rem; font-size: .89rem; }
+.top-nav [aria-current] { font-weight: 750; text-decoration: none; }
 .skip { position: absolute; left: .7rem; top: .7rem; transform: translateY(-200%); padding: .55rem; background: #fff; }
 .skip:focus { transform: none; z-index: 1; }
 .intro { max-width: 49rem; padding-block: 1.9rem .8rem; }
@@ -30,6 +31,10 @@ h2 { font-size: 1.43rem; margin-bottom: .7rem; }
 h3 { font-size: 1.05rem; margin-bottom: .35rem; }
 p { margin: 0 0 .75rem; }
 .panel { margin-block: 0 1.15rem; border: 1px solid var(--line); background: #fff; padding: clamp(.75rem, 2.5vw, 1.35rem); border-radius: .62rem; }
+.requested-system { border-left: .25rem solid var(--accent); }
+.requested-system a { font-weight: 650; }
+.comparison-details .table-scroll { margin-top: .65rem; }
+#changes { margin-top: .75rem; }
 .subtle { color: var(--muted); font-size: .88rem; }
 .controls, .actions { display: flex; gap: .65rem; flex-wrap: wrap; margin-block: .7rem; }
 .controls label { display: grid; gap: .25rem; font-weight: 650; }

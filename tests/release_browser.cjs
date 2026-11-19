@@ -62,6 +62,8 @@ async function exportAndCheck(page,label,immediate) {
   });
   await check(channel+' cost scenarios complete and cancel on changed controls',async()=>{
     await ready(page,'#b=25');
+    await page.getByText('Advanced settings',{exact:true}).click();
+    await page.getByText('Test cost uncertainty',{exact:true}).click();
     await page.locator('#runScen').click();
     await page.waitForFunction(()=>document.querySelector('#runScen').getAttribute('aria-disabled') !== 'true');
     const complete=await page.locator('#scenOut').innerText();assert.ok(complete.includes('80% of 40 scenarios'));
@@ -73,10 +75,10 @@ async function exportAndCheck(page,label,immediate) {
   await check(channel+' selected detail refresh and fixed-share popup',async()=>{
     await ready(page);await page.locator('[data-view="2d"]').click();
     const id=await page.evaluate(()=>__xylem.systems.find(s=>!s.failing&&s.lat).id);
-    await page.locator('#find').fill(id);await page.locator('#find').dispatchEvent('change');
+    await page.locator('#find').fill(id);await page.locator('#find-form').evaluate(form=>form.requestSubmit());
     const before=await page.locator('#detail').innerText();await control(page,'mul',2);const after=await page.locator('#detail').innerText();assert.notEqual(before,after);assert.ok(!after.includes('of stress tests'));const updatedPopup=await page.locator('.leaflet-popup-content').innerText();assert.ok(!updatedPopup.includes('of stress tests'));assert.ok(updatedPopup.includes('unavailable for these controls'));
     await page.locator('[data-val="fixed"]').evaluate(e=>e.click());await control(page,'arw',0.5);
-    await page.locator('#find').dispatchEvent('change');const popup=await page.locator('.leaflet-popup-content').innerText();assert.ok(popup.includes('Fixed At-Risk share'));assert.ok(popup.includes('50%'));
+    await page.locator('#find-form').evaluate(form=>form.requestSubmit());const popup=await page.locator('.leaflet-popup-content').innerText();assert.ok(popup.includes('Fixed At-Risk share'));assert.ok(popup.includes('50%'));
     return {id,before,after,updatedPopup,popup};
   });
   await check(channel+' keyboard controls tabs sort and inspect',async()=>{
@@ -86,6 +88,39 @@ async function exportAndCheck(page,label,immediate) {
     const system=page.locator('.system-link').first();await system.focus();await page.keyboard.press('Enter');assert.equal(await page.locator('#detail').isVisible(),true);
     const focus=await page.locator('.system-link').first().evaluate(e=>({outline:getComputedStyle(e).outlineStyle,width:getComputedStyle(e).outlineWidth}));
     return {rangeName:await budget.getAttribute('aria-label'),valueText:await budget.getAttribute('aria-valuetext'),focus};
+  });
+  await check(channel+' planner search and linked project evidence',async()=>{
+    const styleUrl='**/styles/liberty';
+    let releaseStyle;
+    const styleGate=new Promise(resolve=>{releaseStyle=resolve;});
+    await page.route(styleUrl,async route=>{
+      await styleGate;
+      await route.fulfill({status:503,body:'Deliberate map-loading regression test'});
+    });
+    try {
+      await ready(page,'#b=250');
+      assert.equal(await page.evaluate(()=>Xylem3D.map()),null);
+      const search=page.getByLabel('Water system',{exact:true}), find=page.getByRole('button',{name:'Find',exact:true});
+      await search.fill('unmatched-system-name');await find.click();
+      assert.match(await page.locator('#search-status').innerText(),/No matching/);
+      await search.fill('water');await find.click();
+      assert.equal(await page.locator('#search-matches button').count(),8);
+      await search.fill('east orosi');await search.press('Enter');
+      assert.match(await page.locator('#detailTitle').innerText(),/East Orosi/i);
+      releaseStyle();
+      await page.locator('#map').waitFor({state:'visible'});
+      await page.getByRole('link',{name:'Check project funding evidence'}).click();
+      await page.locator('#requested-title').waitFor();
+      assert.match(await page.locator('#requested-title').innerText(),/East Orosi/i);
+      await page.getByRole('button',{name:'Try East Orosi'}).click();
+      assert.match(await page.locator('#result-status').innerText(),/1 project set aside/);
+      await page.locator('#planner-link').click();
+      await page.waitForFunction(()=>window.__xylem?.st.b===250);
+      return {budget:250,system:'East Orosi'};
+    } finally {
+      releaseStyle();
+      await page.unroute(styleUrl);
+    }
   });
   await check(channel+' map colors synchronize and routes agree',async()=>{
     await ready(page,'#b=500&l=2&r=0.3&c=1');await page.locator('[data-color="status"]').evaluate(e=>e.click());assert.equal(await page.locator('#colorSel').inputValue(),'status');
